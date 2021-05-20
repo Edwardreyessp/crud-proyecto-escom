@@ -1,0 +1,30 @@
+.crud {
+  width: 40rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.header {
+  background: wheat;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.lista {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: lightcoral;
+}
+
+.header div {
+  border: solid 1px rgba(0, 0, 0, 0.2);
+}
+
+.lista section {
+  display: flex;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+}
+
+.lista div {
+  border: solid 1px rgba(0, 0, 0, 0.2);
+}

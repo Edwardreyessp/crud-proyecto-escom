@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<catalog>
+    <!-- <book id="bk101">
+        <author>Autor 1</author>
+        <title>Soy fuerte</title>
+    </book>
+    <book id="bk102">
+        <author>Autor 2</author>
+        <title>Soy débil</title>
+    </book> -->
+    <nivel id="1">
+        <challenge1>
+            <x1>50</x1>
+            <x2>2</x2>
+            <X1plusx2>52</X1plusx2>
+            <y1>9</y1>
+            <area1>450</area1>
+            <area2>18</area2>
+            <resultado>468</resultado>
+            <numero>1</numero>
+        </challenge1>
+        <challenge2>
+            <x1>5</x1>
+            <y1>2</y1>
+            <y2>30</y2>
+            <y3>600</y3>
+            <yt>632</yt>
+            <resultado>3160</resultado>
+            <numero>2</numero>
+        </challenge2>
+    </nivel>
+    <nivel id="2">
+        <challenge1>
+            <x1>50</x1>
+            <x2>2</x2>
+            <X1plusx2>52</X1plusx2>
+            <y1>9</y1>
+            <area1>450</area1>
+            <area2>18</area2>
+            <resultado>468</resultado>
+            <numero>1</numero>
+        </challenge1>
+        <challenge2>
+            <x1>5</x1>
+            <y1>2</y1>
+            <y2>30</y2>
+            <y3>600</y3>
+            <yt>632</yt>
+            <resultado>3160</resultado>
+            <numero>2</numero>
+        </challenge2>
+    </nivel>
+</catalog>
