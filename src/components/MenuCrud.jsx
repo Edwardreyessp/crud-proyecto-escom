@@ -5,6 +5,7 @@ const MenuCrud = () => {
     let xmlContent = ''
     let libros = []
     const [preState, setPreState] = useState([])
+    let array = [0, 1]
 
     const set = async () => {
       await fetch("CRUD.xml").then((response) => {
@@ -14,80 +15,36 @@ const MenuCrud = () => {
           let parser = new DOMParser()
           let xmlDOM = parser.parseFromString(xmlContent, 'application/xml')
           let niveles = xmlDOM.querySelectorAll('nivel')
-          niveles.forEach(nivelXMLNode => {
-            //id
-            let id
-            id = nivelXMLNode.getAttribute("id")
+          niveles.forEach((nivelXMLNode) => {
+            array.forEach(index2 => {
+              let id = nivelXMLNode.children[index2].getAttribute("id")
+              let x1 = nivelXMLNode.children[index2].children[0].textContent
+              let x2 = nivelXMLNode.children[index2].children[1].textContent
+              let x3 = nivelXMLNode.children[index2].children[2].textContent
+              let y1 = nivelXMLNode.children[index2].children[3].textContent
+              let y2 = nivelXMLNode.children[index2].children[4].textContent
+              let y3 = nivelXMLNode.children[index2].children[5].textContent
 
-            //Nivel1 challenge1
-            let AAx1 = ""
-            AAx1 = nivelXMLNode.children[0].children[0].textContent
-
-            let AAx2 = ""
-            AAx2 = nivelXMLNode.children[0].children[1].textContent
-
-            let AAx1plusx2 = ""
-            AAx1plusx2 = nivelXMLNode.children[0].children[2].textContent
-
-            let AAy1 = ""
-            AAy1 = nivelXMLNode.children[0].children[3].textContent
-
-            let AAarea1 = ""
-            AAarea1 = nivelXMLNode.children[0].children[4].textContent
-
-            let AAarea2 = ""
-            AAarea2 = nivelXMLNode.children[0].children[5].textContent
-
-            let AAresultado = ""
-            AAresultado = nivelXMLNode.children[0].children[6].textContent
-
-            //nivel1 challenge2
-            let ABx1 = ""
-            ABx1 = nivelXMLNode.children[1].children[0].textContent
-
-            let ABy1 = ""
-            ABy1 = nivelXMLNode.children[1].children[1].textContent
-
-            let ABy2 = ""
-            ABy2 = nivelXMLNode.children[1].children[2].textContent
-
-            let ABy3 = ""
-            ABy3 = nivelXMLNode.children[1].children[3].textContent
-
-            let AByTotal = ""
-            AByTotal = nivelXMLNode.children[1].children[4].textContent
-
-            let ABresultado = ""
-            ABresultado = nivelXMLNode.children[1].children[5].textContent
-
-            libros = [...libros, {id: id,
-                                  array: [1, 2, 3, 4, 5, 6],
-                                  //Nivel1 challenge1
-                                  AAx1: AAx1,
-                                  AAx2: AAx2,
-                                  AAx1plusx2: AAx1plusx2,
-                                  AAy1: AAy1,
-                                  AAarea1: AAarea1,
-                                  AAarea2: AAarea2,
-                                  AAresultado: AAresultado,
-                                  //Nivel1 challenge2
-                                  ABx1: ABx1,
-                                  ABy1: ABy1,
-                                  ABy2: ABy2,
-                                  ABy3: ABy3,
-                                  AByTotal: AByTotal,
-                                  ABresultado: ABresultado
-                                }
-            ]
+              libros = [...libros, {
+                                    id: id,
+                                    x1: x1,
+                                    x2: x2,
+                                    x3: x3,
+                                    y1: y1,
+                                    y2: y2,
+                                    y3: y3
+                                  }]
+            })
+            setPreState([...libros])
           })
-          setPreState([...libros])
         })
       })
     }
 
   useEffect(() => {
-      set()
-  })
+    set()
+    // eslint-disable-next-line
+  },[])
     
   return (
     <div>
@@ -96,7 +53,7 @@ const MenuCrud = () => {
           <div>Ejercicio</div>
           <div>Acciones</div>
         </section>
-        {preState.map(({id, array}) => (
+        {/* {preState.map(({id, array}) => (
           <section key={id}>
             {array.map((index) => (
               <section className={styles.lista}>
@@ -110,7 +67,8 @@ const MenuCrud = () => {
               </section>
             ))}
           </section>
-        ))}
+        ))} */}
+        <button onClick={() => console.log(preState)}>View preState</button>
       </main>
     </div>
   )
