@@ -1,0 +1,52 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  .enlaces {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+    background-color: antiquewhite;
+
+    .link {
+      text-decoration: none;
+      color: black;
+
+      i {
+        margin: 0 0.3rem;
+      }
+
+      div:hover {
+        opacity: 0.5;
+        border-bottom: 2px black solid;
+      }
+    }
+  }
+
+  .login {
+    background-color: wheat;
+    height: 93.1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid black;
+
+      input {
+        padding: 0.5rem 0.2rem;
+        margin: 0.5rem 0;
+      }
+
+      button {
+        padding: 0.5rem 0.5rem;
+      }
+    }
+  }
+}

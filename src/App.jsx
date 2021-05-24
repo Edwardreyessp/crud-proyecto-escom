@@ -7,6 +7,9 @@ import {
     Link
 } from "react-router-dom"
 import Register from "./components/Register"
+import styles from './scss/App.module.scss'
+import "./scss/main.scss"
+
 let xmlContent = ''
 let nicks = []
 let refresh = ''
@@ -17,6 +20,7 @@ const App = () => {
   const [user, setUser] = useState("")
   const [inpassword, setinPassword] = useState("")
   const [component, setComponent] = useState("")
+  const [login, setLogin] = useState(false)
 
   useEffect(() => {
     fetch("Users.xml").then((response) => {
@@ -50,43 +54,71 @@ const App = () => {
   const handleSumbit = (e) => {
     e.preventDefault()
     state.map(({nick, password}) => {
-      if(nick === "admin" && password === "1234" && nick === user && password === inpassword)
+      if(nick === "admin" && password === "1234" && nick === user && password === inpassword) {
         setComponent("MenuCrud")
-      else if(nick === user && password === inpassword && nick !== "admin")
+        setLogin(true)
+      }
+      else if(nick === user && password === inpassword && nick !== "admin") {
         setComponent("usuario")
+        setLogin(true)
+      }
       return ""
     })
     setUser("")
     setinPassword("")
   }
 
+  const reset = () => {
+    setComponent("")
+    setLogin(false)
+  }
+
   return (
     <Router>
-      <main>
-        <section>
-          <Link to="/" onClick={() => setComponent("")}>Home</Link>
-          <Link to="/register">Register</Link>
+      <main className={styles.container}>
+        <section className={styles.enlaces}>
+          {/* <Link to="/Proyecto/index.html" onClick={() => reset()}>Home</Link> */}
+          <Link to="/" className={styles.link}
+            onClick={() => reset()}>
+            <div>
+              <i className="fas fa-home"></i>
+              Home
+            </div>
+          </Link>
+          <div>Logo bien mamalón</div>
+          {!login && 
+            <Link to="/register" className={styles.link}
+            onClick={() => setLogin(true)}>
+              <div>
+                Sing in
+                <i className="fas fa-sign-in-alt"></i>
+              </div>
+            </Link>
+          }
         </section>
         <Switch>
+          {/* <Route path="/Proyecto/index.html"> */}
           <Route exact path="/">
             {component === "MenuCrud" && <MenuCrud/>}
             {component === "usuario" && <h1>Modo usuario</h1>}
             {component === "" &&
-              <form className="form" onSubmit={handleSumbit}>
-                <input
-                    placeholder="User"
-                    type="text"
-                    onChange={(e) => setUser(e.target.value)}
-                    value={user}
-                />
-                <input
-                    placeholder="Password"
-                    type="text"
-                    onChange={(e) => setinPassword(e.target.value)}
-                    value={inpassword}
-                />
-                <button>Ingresar</button>
-              </form>}
+              <div className={styles.login}>
+                <form className={styles.form} onSubmit={handleSumbit}>
+                  <input
+                      placeholder="User"
+                      type="text"
+                      onChange={(e) => setUser(e.target.value)}
+                      value={user}
+                  />
+                  <input
+                      placeholder="Password"
+                      type="text"
+                      onChange={(e) => setinPassword(e.target.value)}
+                      value={inpassword}
+                  />
+                  <button>Ingresar</button>
+                </form>
+              </div>}
           </Route>
           <Route path="/register">
             <Register state={state} setState={setState}/>
