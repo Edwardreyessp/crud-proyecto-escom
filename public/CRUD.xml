@@ -4,9 +4,11 @@
         <x1>60</x1>
         <x2>9</x2>
         <x3></x3>
+        <xtotal>69</xtotal>
         <y1>8</y1>
         <y2></y2>
         <y3></y3>
+        <ytotal>8</ytotal>
         <x1pory1>480</x1pory1>
         <x1pory2></x1pory2>
         <x1pory3></x1pory3>
@@ -23,9 +25,11 @@
         <x1>50</x1>
         <x2>2</x2>
         <x3></x3>
+        <xtotal>52</xtotal>
         <y1>70</y1>
         <y2>5</y2>
         <y3></y3>
+        <ytotal>75</ytotal>
         <x1pory1>3500</x1pory1>
         <x1pory2>Icognita:250</x1pory2>
         <x1pory3></x1pory3>
@@ -36,15 +40,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>3900</area>
-        <tipo>1</tipo>
+        <tipo>2x2</tipo>
     </challenge>
     <challenge id ="13">
         <x1>30</x1>
         <x2>2</x2>
         <x3></x3>
+        <xtotal>32</xtotal>
         <y1>80</y1>
         <y2>6</y2>
         <y3></y3>
+        <ytotal>86</ytotal>
         <x1pory1>2400</x1pory1>
         <x1pory2>180</x1pory2>
         <x1pory3></x1pory3>
@@ -55,15 +61,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>Icognita:2752</area>
-        <tipo>1</tipo>
+        <tipo>2x2</tipo>
     </challenge>
     <challenge id ="14">
         <x1>3</x1>
         <x2></x2>
         <x3></x3>
+        <xtotal>3</xtotal>
         <y1>30</y1>
         <y2>8</y2>
         <y3></y3>
+        <ytotal>38</ytotal>
         <x1pory1>90</x1pory1>
         <x1pory2>Icognita:24</x1pory2>
         <x1pory3></x1pory3>
@@ -74,15 +82,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>114</area>
-        <tipo>1</tipo>
+        <tipo>2x1</tipo>
     </challenge>
     <challenge id ="15">
         <x1>6</x1>
         <x2></x2>
         <x3></x3>
+        <xtotal>6</xtotal>
         <y1>800</y1>
         <y2>50</y2>
         <y3>4</y3>
+        <ytotal>854</ytotal>
         <x1pory1>Icognita:4800</x1pory1>
         <x1pory2></x1pory2>
         <x1pory3></x1pory3>
@@ -93,15 +103,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>5124</area>
-        <tipo>1</tipo>
+        <tipo>1x3</tipo>
     </challenge>
     <challenge id ="16">
         <x1>80</x1>
         <x2>1</x2>
         <x3></x3>
+        <xtotal>81</xtotal>
         <y1>60</y1>
         <y2>3</y2>
         <y3></y3>
+        <ytotal>63</ytotal>
         <x1pory1>4800</x1pory1>
         <x1pory2>240</x1pory2>
         <x1pory3></x1pory3>
@@ -112,15 +124,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>Icognita:5103</area>
-        <tipo>1</tipo>
+        <tipo>2x2</tipo>
     </challenge>
     <challenge id ="21">
         <x1>90</x1>
         <x2>9</x2>
         <x3></x3>
+        <xtotal>99</xtotal>
         <y1>20</y1>
         <y2>9</y2>
         <y3></y3>
+        <ytotal>29</ytotal>
         <x1pory1>Icognita:1800</x1pory1>
         <x1pory2>810</x1pory2>
         <x1pory3></x1pory3>
@@ -131,15 +145,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>2871</area>
-        <tipo>1</tipo>
+        <tipo>2x2</tipo>
     </challenge>
     <challenge id ="22">
         <x1>70</x1>
         <x2>6</x2>
         <x3></x3>
+        <xtotal>76</xtotal>
         <y1>800</y1>
         <y2>50</y2>
         <y3>2</y3>
+        <ytotal>852</ytotal>
         <x1pory1>56000</x1pory1>
         <x1pory2>Icognita:3500</x1pory2>
         <x1pory3>140</x1pory3>
@@ -150,15 +166,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>Icognita:64752</area>
-        <tipo>1</tipo>
+        <tipo>2x3</tipo>
     </challenge>
     <challenge id ="23">
         <x1>500</x1>
         <x2>30</x2>
         <x3>8</x3>
+        <xtotal>538</xtotal>
         <y1>100</y1>
         <y2>60</y2>
         <y3>1</y3>
+        <ytotal>161</ytotal>
         <x1pory1>50000</x1pory1>
         <x1pory2>30000</x1pory2>
         <x1pory3>500</x1pory3>
@@ -169,15 +187,17 @@
         <x3pory2>480</x3pory2>
         <x3pory3>Icognita:8</x3pory3>
         <area>86618</area>
-        <tipo>1</tipo>
+        <tipo>3x3</tipo>
     </challenge>
     <challenge id ="24">
         <x1>80</x1>
         <x2>1</x2>
         <x3></x3>
+        <xtotal>81</xtotal>
         <y1>90</y1>
         <y2>6</y2>
         <y3></y3>
+        <xtotal>96</xtotal>
         <x1pory1>7200</x1pory1>
         <x1pory2>Icognita:480</x1pory2>
         <x1pory3></x1pory3>
@@ -188,15 +208,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>7776</area>
-        <tipo>1</tipo>
+        <tipo>2x2</tipo>
     </challenge>
     <challenge id ="25">
         <x1>80</x1>
         <x2>7</x2>
         <x3></x3>
+        <xtotal>87</xtotal>
         <y1>400</y1>
         <y2>30</y2>
         <y3>7</y3>
+        <ytotal>437</ytotal>
         <x1pory1>3200</x1pory1>
         <x1pory2>2400</x1pory2>
         <x1pory3>icognita:560</x1pory3>
@@ -207,15 +229,17 @@
         <x3pory2></x3pory2>
         <x3pory3>38019</x3pory3>
         <area></area>
-        <tipo>1</tipo>
+        <tipo>2x3</tipo>
     </challenge>
     <challenge id ="26">
         <x1>60</x1>
         <x2>5</x2>
         <x3></x3>
+        <xtotal>65</xtotal>
         <y1>40</y1>
         <y2>2</y2>
         <y3></y3>
+        <ytotal>42</ytotal>
         <x1pory1>2400</x1pory1>
         <x1pory2>icognita:120</x1pory2>
         <x1pory3></x1pory3>
@@ -226,7 +250,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>2730</area>
-        <tipo>1</tipo>
+        <tipo>2x2</tipo>
     </challenge>
     <challenge id ="31">
         <x1>9</x1>
@@ -234,6 +258,7 @@
         <x3></x3>
         <y1>Icognita:30</y1>
         <y2>Icognita:7</y2>
+        <ytotal>37</ytotal>
         <y3></y3>
         <x1pory1>270</x1pory1>
         <x1pory2>Se mueve dinamica</x1pory2>
@@ -245,15 +270,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>333</area>
-        <tipo>1</tipo>
+        <tipo>1x2</tipo>
     </challenge>
     <challenge id ="32">
         <x1>icognita8:</x1>
         <x2></x2>
         <x3></x3>
+        <xtotal>icognia:8</xtotal>
         <y1>80</y1>
         <y2>icognita:9</y2>
         <y3></y3>
+        <ytotal>89</ytotal>
         <x1pory1>640</x1pory1>
         <x1pory2>dinamico</x1pory2>
         <x1pory3></x1pory3>
@@ -264,15 +291,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>712</area>
-        <tipo>1</tipo>
+        <tipo>2x1</tipo>
     </challenge>
     <challenge id ="33">
         <x1>50</x1>
         <x2>icognita:1</x2>
         <x3>90</x3>
+        <xtotal>51</xtotal>
         <y1>icognita:2</y1>
         <y2></y2>
         <y3></y3>
+        <ytotal>92</ytotal>
         <x1pory1>4500</x1pory1>
         <x1pory2>100</x1pory2>
         <x1pory3></x1pory3>
@@ -283,15 +312,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>4692</area>
-        <tipo>1</tipo>
+        <tipo>2x2</tipo>
     </challenge>
     <challenge id ="34">
         <x1>icognita:60</x1>
         <x2>icgonita:7</x2>
         <x3></x3>
+        <xtotal>67</xtotal>
         <y1>8</y1>
         <y2></y2>
         <y3></y3>
+        <ytotal>8</ytotal>
         <x1pory1>480</x1pory1>
         <x1pory2></x1pory2>
         <x1pory3></x1pory3>
@@ -302,15 +333,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>536</area>
-        <tipo>1</tipo>
+        <tipo>2x1</tipo>
     </challenge>
     <challenge id ="35">
         <x1>7</x1>
         <x2></x2>
         <x3></x3>
+        <xtotal>7</xtotal>
         <y1>icognita:10</y1>
         <y2>icognita:8</y2>
         <y3></y3>
+        <ytotal>18</ytotal>
         <x1pory1>70</x1pory1>
         <x1pory2>dinamico</x1pory2>
         <x1pory3></x1pory3>
@@ -321,15 +354,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>126</area>
-        <tipo>1</tipo>
+        <tipo>1x2</tipo>
     </challenge>
     <challenge id ="36">
         <x1>icognita:70</x1>
         <x2>icognita:7</x2>
         <x3></x3>
+        <xtotal>77</xtotal>
         <y1>6</y1>
         <y2></y2>
         <y3></y3>
+        <ytotal>6</ytotal>
         <x1pory1>42</x1pory1>
         <x1pory2></x1pory2>
         <x1pory3></x1pory3>
@@ -340,15 +375,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>462</area>
-        <tipo>1</tipo>
+        <tipo>2x1</tipo>
     </challenge>
     <challenge id ="41">
         <x1>icognita:200</x1>
         <x2>incognita:70</x2>
         <x3>icognita:6</x3>
+        <xtotal>276</xtotal>
         <y1>50</y1>
         <y2>4</y2>
         <y3></y3>
+        <ytotal>54</ytotal>
         <x1pory1>dinamico</x1pory1>
         <x1pory2>800</x1pory2>
         <x1pory3></x1pory3>
@@ -359,15 +396,17 @@
         <x3pory2>24</x3pory2>
         <x3pory3></x3pory3>
         <area>14904</area>
-        <tipo>1</tipo>
+        <tipo>3x2</tipo>
     </challenge>
     <challenge id ="42">
         <x1>icognita:600</x1>
         <x2>90</x2>
         <x3>4</x3>
+        <xtotal>694</xtotal>
         <y1>10</y1>
         <y2>9</y2>
         <y3></y3>
+        <ytotal>19</ytotal>
         <x1pory1>6000</x1pory1>
         <x1pory2>5400</x1pory2>
         <x1pory3></x1pory3>
@@ -377,16 +416,18 @@
         <x3pory1>40</x3pory1>
         <x3pory2>36</x3pory2>
         <x3pory3></x3pory3>
-        <area></area>
-        <tipo>1</tipo>
+        <area>13186</area>
+        <tipo>3x2</tipo>
     </challenge>
     <challenge id ="43">
         <x1>10</x1>
         <x2>icognita:5</x2>
         <x3></x3>
+        <xtotal>15</xtotal>
         <y1>700</y1>
         <y2>icognita:60</y2>
         <y3>icgonita:4</y3>
+        <ytotal>764</ytotal>
         <x1pory1>7000</x1pory1>
         <x1pory2>6000</x1pory2>
         <x1pory3>40</x1pory3>
@@ -397,15 +438,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>11460</area>
-        <tipo>1</tipo>
+        <tipo>2x3</tipo>
     </challenge>
     <challenge id ="44">
         <x1>icognita:300</x1>
         <x2>50</x2>
         <x3>icognita:7</x3>
+        <xtotal>357</xtotal>
         <y1>icognita:100</y1>
         <y2>30</y2>
         <y3>3</y3>
+        <ytotal>133</ytotal>
         <x1pory1>30000</x1pory1>
         <x1pory2>dinamico</x1pory2>
         <x1pory3>900</x1pory3>
@@ -416,15 +459,17 @@
         <x3pory2>210</x3pory2>
         <x3pory3>21</x3pory3>
         <area>47481</area>
-        <tipo>1</tipo>
+        <tipo>3x3</tipo>
     </challenge>
     <challenge id ="45">
         <x1>icognita:40</x1>
         <x2>4</x2>
         <x3></x3>
+        <xtotal>44</xtotal>
         <y1>icognita:400</y1>
         <y2>icognita:80</y2>
         <y3>4</y3>
+        <ytotal>484</ytotal>
         <x1pory1>16000</x1pory1>
         <x1pory2>dinamico</x1pory2>
         <x1pory3>160</x1pory3>
@@ -435,15 +480,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>21296</area>
-        <tipo>1</tipo>
+        <tipo>2x3</tipo>
     </challenge>
     <challenge id ="46">
         <x1>400</x1>
         <x2>icognita:90</x2>
         <x3>icognita:9</x3>
+        <xtotal>499</xtotal>
         <y1>icognita:80</y1>
         <y2>9</y2>
         <y3></y3>
+        <ytotal>89</ytotal>
         <x1pory1>32000</x1pory1>
         <x1pory2>36000</x1pory2>
         <x1pory3></x1pory3>
@@ -454,15 +501,17 @@
         <x3pory2>dinamico</x3pory2>
         <x3pory3></x3pory3>
         <area></area>
-        <tipo>1</tipo>
+        <tipo>3x2</tipo>
     </challenge>
     <challenge id ="51">
         <x1>icognita:4</x1>
         <x2></x2>
         <x3></x3>
+        <xtotal>4</xtotal>
         <y1>icognita:20</y1>
         <y2>2</y2>
         <y3></y3>
+        <ytotal>22</ytotal>
         <x1pory1>80</x1pory1>
         <x1pory2>8</x1pory2>
         <x1pory3></x1pory3>
@@ -473,15 +522,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>88</area>
-        <tipo>1</tipo>
+        <tipo>1x2</tipo>
     </challenge>
     <challenge id ="52">
         <x1>10</x1>
         <x2>icognita:9</x2>
         <x3></x3>
+        <xtotal>dinamicas</xtotal>
         <y1>icognita:9</y1>
         <y2></y2>
         <y3></y3>
+        <ytotal>dinamica</ytotal>
         <x1pory1>90</x1pory1>
         <x1pory2></x1pory2>
         <x1pory3></x1pory3>
@@ -492,15 +543,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>171</area>
-        <tipo>1</tipo>
+        <tipo>2x1</tipo>
     </challenge>
     <challenge id ="53">
         <x1>icognita:4</x1>
         <x2></x2>
         <x3></x3>
+        <xtotal>dinamica</xtotal>
         <y1>icognita:90</y1>
         <y2>6</y2>
         <y3></y3>
+        <ytotal>dinamica</ytotal>
         <x1pory1>360</x1pory1>
         <x1pory2>24</x1pory2>
         <x1pory3></x1pory3>
@@ -511,15 +564,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>423</area>
-        <tipo>1</tipo>
+        <tipo>1x2</tipo>
     </challenge>
     <challenge id ="54">
         <x1>cigonita:7</x1>
         <x2></x2>
         <x3></x3>
+        <xtotal>dinamica</xtotal>
         <y1>600</y1>
         <y2>icognita:80</y2>
         <y3>9</y3>
+        <ytotal>dinamica</ytotal>
         <x1pory1>4200</x1pory1>
         <x1pory2>560</x1pory2>
         <x1pory3>63</x1pory3>
@@ -530,15 +585,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>4823</area>
-        <tipo>1</tipo>
+        <tipo>1x3</tipo>
     </challenge>
     <challenge id ="55">
         <x1>icognita:5</x1>
         <x2></x2>
         <x3></x3>
+        <xtotal>dinamica</xtotal>
         <y1>100</y1>
         <y2>icognita:80</y2>
         <y3>6</y3>
+        <ytotal>dinamica</ytotal>
         <x1pory1>500</x1pory1>
         <x1pory2>400</x1pory2>
         <x1pory3>30</x1pory3>
@@ -548,16 +605,18 @@
         <x3pory1></x3pory1>
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
-        <area></area>
-        <tipo>1</tipo>
+        <area>930</area>
+        <tipo>1x3</tipo>
     </challenge>
     <challenge id ="56">
         <x1>icognita:2</x1>
         <x2></x2>
         <x3></x3>
+        <xtotal>dinamica</xtotal>
         <y1>icognita:600</y1>
         <y2>20</y2>
         <y3>8</y3>
+        <ytotal>dinamica</ytotal>
         <x1pory1>1200</x1pory1>
         <x1pory2>40</x1pory2>
         <x1pory3>16</x1pory3>
@@ -568,12 +627,13 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>1256</area>
-        <tipo>1</tipo>
+        <tipo>1x3</tipo>
     </challenge>
     <challenge id ="61">
         <x1>icognita:40</x1>
         <x2>1</x2>
         <x3></x3>
+        <xtotal>dinamica</xtotal>
         <y1>icognita:80</y1>
         <y2>icognita:7</y2>
         <y3></y3>
@@ -593,9 +653,11 @@
         <x1>icognita:70</x1>
         <x2>icgonita:7</x2>
         <x3></x3>
+        <xtotal>dinamica</xtotal>
         <y1>30</y1>
         <y2>icgonita:4</y2>
         <y3></y3>
+        <xtotal>dinamica</xtotal>
         <x1pory1>2100</x1pory1>
         <x1pory2>280</x1pory2>
         <x1pory3></x1pory3>
@@ -606,15 +668,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area></area>
-        <tipo>1</tipo>
+        <tipo>2x2</tipo>
     </challenge>
     <challenge id ="63">
         <x1>icognita:39</x1>
         <x2>icognita:9</x2>
         <x3></x3>
+        <xtotal>dinamica</xtotal>
         <y1>30</y1>
         <y2>icognita:3</y2>
         <y3></y3>
+        <xtotal>dinamica</xtotal>
         <x1pory1>900</x1pory1>
         <x1pory2>90</x1pory2>
         <x1pory3></x1pory3>
@@ -625,15 +689,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area></area>
-        <tipo>1</tipo>
+        <tipo>2x2</tipo>
     </challenge>
     <challenge id ="64">
         <x1>icognita:40</x1>
         <x2>icognita:6</x2>
         <x3></x3>
+        <xtotal>dinamica</xtotal>
         <y1>icognita:30</y1>
         <y2>4</y2>
         <y3></y3>
+        <xtotal>dinamica</xtotal>
         <x1pory1>1200</x1pory1>
         <x1pory2>160</x1pory2>
         <x1pory3></x1pory3>
@@ -644,15 +710,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>1564</area>
-        <tipo>1</tipo>
+        <tipo>2x2</tipo>
     </challenge>
     <challenge id ="65">
         <x1>icognita:10</x1>
         <x2>icognita:5</x2>
         <x3></x3>
+        <xtotal>dinamica</xtotal>
         <y1>30</y1>
         <y2>icognita:7</y2>
         <y3></y3>
+        <xtotal>dinamica</xtotal>
         <x1pory1>300</x1pory1>
         <x1pory2>70</x1pory2>
         <x1pory3></x1pory3>
@@ -663,15 +731,17 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>555</area>
-        <tipo>1</tipo>
+        <tipo>2x2</tipo>
     </challenge>
     <challenge id ="66">
         <x1>icognita:80</x1>
         <x2>icognita:270</x2>
         <x3></x3>
+        <xtotal>dinamica</xtotal>
         <y1>icognita:30</y1>
         <y2>4</y2>
         <y3></y3>
+        <ytotal>dinamica</ytotal>
         <x1pory1>2400</x1pory1>
         <x1pory2>320</x1pory2>
         <x1pory3></x1pory3>
@@ -682,6 +752,6 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>3026</area>
-        <tipo>1</tipo>
+        <tipo>2x2</tipo>
     </challenge>
 </niveles>

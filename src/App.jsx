@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import MenuCrud from "./components/MenuCrud"
+import swal from 'sweetalert'
 import {
     BrowserRouter as Router,
     Switch,
@@ -53,13 +54,16 @@ const App = () => {
     
   const handleSumbit = (e) => {
     e.preventDefault()
+    let  entrada = true
     state.map(({nick, password}) => {
       if(nick === "admin" && password === "1234" && nick === user && password === inpassword) {
         setComponent("MenuCrud")
+        entrada= false
         setLogin(true)
       }
       else if(nick === user && password === inpassword && nick !== "admin") {
         setComponent("usuario")
+        entrada= false
         setLogin(true)
       }
       return "";
@@ -67,7 +71,8 @@ const App = () => {
 
     setUser("")
     setinPassword("")
-    return alert("Favor de verificar contraseña y/o usario")
+    if(entrada){
+    return swal("¡Usario o contraseña diferente!", "Intente de Nuevo", "error");};
   }
 
   const reset = () => {
