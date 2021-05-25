@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import MenuCrud from "./components/MenuCrud"
 import swal from 'sweetalert'
+import '../src/scss/swAlerts.scss'
 import {
     BrowserRouter as Router,
     Switch,
