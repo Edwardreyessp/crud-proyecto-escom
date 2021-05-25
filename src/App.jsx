@@ -62,10 +62,12 @@ const App = () => {
         setComponent("usuario")
         setLogin(true)
       }
-      return ""
+      return "";
     })
+
     setUser("")
     setinPassword("")
+    return alert("Favor de verificar contraseña y/o usario")
   }
 
   const reset = () => {
