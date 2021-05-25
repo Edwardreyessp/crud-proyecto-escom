@@ -26,29 +26,33 @@ const MenuCrud = () => {
               let x1 = nivelXMLNode.children[index2].children[0].textContent
               let x2 = nivelXMLNode.children[index2].children[1].textContent
               let x3 = nivelXMLNode.children[index2].children[2].textContent
-              let y1 = nivelXMLNode.children[index2].children[3].textContent
-              let y2 = nivelXMLNode.children[index2].children[4].textContent
-              let y3 = nivelXMLNode.children[index2].children[5].textContent
-              let x1pory1 = nivelXMLNode.children[index2].children[6].textContent
-              let x1pory2 = nivelXMLNode.children[index2].children[7].textContent
-              let x1pory3 = nivelXMLNode.children[index2].children[8].textContent
-              let x2pory1 = nivelXMLNode.children[index2].children[9].textContent
-              let x2pory2 = nivelXMLNode.children[index2].children[10].textContent
-              let x2pory3 = nivelXMLNode.children[index2].children[11].textContent
-              let x3pory1 = nivelXMLNode.children[index2].children[12].textContent
-              let x3pory2 = nivelXMLNode.children[index2].children[13].textContent
-              let x3pory3 = nivelXMLNode.children[index2].children[14].textContent
-              let area = nivelXMLNode.children[index2].children[15].textContent
-              let tipo = nivelXMLNode.children[index2].children[16].textContent
+              let xtotal = nivelXMLNode.children[index2].children[3].textContent
+              let y1 = nivelXMLNode.children[index2].children[4].textContent
+              let y2 = nivelXMLNode.children[index2].children[5].textContent
+              let y3 = nivelXMLNode.children[index2].children[6].textContent
+              let ytotal = nivelXMLNode.children[index2].children[7].textContent
+              let x1pory1 = nivelXMLNode.children[index2].children[8].textContent
+              let x1pory2 = nivelXMLNode.children[index2].children[9].textContent
+              let x1pory3 = nivelXMLNode.children[index2].children[10].textContent
+              let x2pory1 = nivelXMLNode.children[index2].children[11].textContent
+              let x2pory2 = nivelXMLNode.children[index2].children[12].textContent
+              let x2pory3 = nivelXMLNode.children[index2].children[13].textContent
+              let x3pory1 = nivelXMLNode.children[index2].children[14].textContent
+              let x3pory2 = nivelXMLNode.children[index2].children[15].textContent
+              let x3pory3 = nivelXMLNode.children[index2].children[16].textContent
+              let area = nivelXMLNode.children[index2].children[17].textContent
+              let tipo = nivelXMLNode.children[index2].children[18].textContent
 
               libros = [...libros, {
                                     id: id,
                                     x1: x1,
                                     x2: x2,
                                     x3: x3,
+                                    xtotal: xtotal,
                                     y1: y1,
                                     y2: y2,
                                     y3: y3,
+                                    ytotal: ytotal,
                                     x1pory1: x1pory1,
                                     x1pory2: x1pory2,
                                     x1pory3: x1pory3,
@@ -89,18 +93,7 @@ const MenuCrud = () => {
           {state.map(({id}) => (
             <section key={id} className={styles.lista}>
               <div>
-                  Nivel {id[0] === "A" && 1}
-                    {id[0] === "B" && 2}
-                    {id[0] === "C" && 3}
-                    {id[0] === "D" && 4}
-                    {id[0] === "E" && 5}
-                    {id[0] === "F" && 6}
-                  -challenge {id[1] === "A" && 1}
-                    {id[1] === "B" && 2}
-                    {id[1] === "C" && 3}
-                    {id[1] === "D" && 4}
-                    {id[1] === "E" && 5}
-                    {id[1] === "F" && 6}
+                  Nivel {id[0]} -challenge {id[1]}
               </div>
               <section>
                 <button onClick={() => setVerEjercicio(id)}>
