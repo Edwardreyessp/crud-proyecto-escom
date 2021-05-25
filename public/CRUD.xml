@@ -17,6 +17,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>Icognita:52</area>
+        <tipo>2x1</tipo>
     </challenge>
     <challenge id ="AB">
         <x1>50</x1>
@@ -35,6 +36,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>3900</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="AC">
         <x1>30</x1>
@@ -53,6 +55,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>Icognita:2752</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="AD">
         <x1>3</x1>
@@ -71,6 +74,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>114</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="AE">
         <x1>6</x1>
@@ -89,6 +93,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>5124</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="AF">
         <x1>80</x1>
@@ -107,6 +112,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>Icognita:5103</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="BA">
         <x1>90</x1>
@@ -125,6 +131,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>2871</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="BB">
         <x1>70</x1>
@@ -143,6 +150,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>Icognita:64752</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="BC">
         <x1>500</x1>
@@ -161,6 +169,7 @@
         <x3pory2>480</x3pory2>
         <x3pory3>Icognita:8</x3pory3>
         <area>86618</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="BD">
         <x1>80</x1>
@@ -179,6 +188,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>7776</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="BE">
         <x1>80</x1>
@@ -197,6 +207,7 @@
         <x3pory2></x3pory2>
         <x3pory3>38019</x3pory3>
         <area></area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="BF">
         <x1>60</x1>
@@ -215,6 +226,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>2730</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="CA">
         <x1>9</x1>
@@ -233,6 +245,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>333</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="CB">
         <x1>icognita8:</x1>
@@ -251,6 +264,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>712</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="CC">
         <x1>50</x1>
@@ -269,6 +283,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>4692</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="CD">
         <x1>icognita:60</x1>
@@ -287,6 +302,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>536</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="CE">
         <x1>7</x1>
@@ -305,6 +321,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>126</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="CF">
         <x1>icognita:70</x1>
@@ -323,6 +340,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>462</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="DA">
         <x1>icognita:200</x1>
@@ -341,6 +359,7 @@
         <x3pory2>24</x3pory2>
         <x3pory3></x3pory3>
         <area>14904</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="DB">
         <x1>icognita:600</x1>
@@ -359,6 +378,7 @@
         <x3pory2>36</x3pory2>
         <x3pory3></x3pory3>
         <area></area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="DC">
         <x1>10</x1>
@@ -377,6 +397,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>11460</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="DD">
         <x1>icognita:300</x1>
@@ -395,6 +416,7 @@
         <x3pory2>210</x3pory2>
         <x3pory3>21</x3pory3>
         <area>47481</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="DE">
         <x1>icognita:40</x1>
@@ -413,6 +435,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>21296</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="DF">
         <x1>400</x1>
@@ -431,6 +454,7 @@
         <x3pory2>dinamico</x3pory2>
         <x3pory3></x3pory3>
         <area></area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="EA">
         <x1>icognita:4</x1>
@@ -449,6 +473,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>88</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="EB">
         <x1>10</x1>
@@ -467,6 +492,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>171</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="EC">
         <x1>icognita:4</x1>
@@ -485,6 +511,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>423</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="ED">
         <x1>cigonita:7</x1>
@@ -503,6 +530,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>4823</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="EE">
         <x1>icognita:5</x1>
@@ -521,6 +549,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area></area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="EF">
         <x1>icognita:2</x1>
@@ -539,6 +568,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>1256</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="FA">
         <x1>icognita:40</x1>
@@ -557,6 +587,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>3567</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="FB">
         <x1>icognita:70</x1>
@@ -575,6 +606,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area></area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="FC">
         <x1>icognita:39</x1>
@@ -593,6 +625,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area></area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="FD">
         <x1>icognita:40</x1>
@@ -611,6 +644,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>1564</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="FE">
         <x1>icognita:10</x1>
@@ -629,6 +663,7 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>555</area>
+        <tipo>1</tipo>
     </challenge>
     <challenge id ="FF">
         <x1>icognita:80</x1>
@@ -647,5 +682,6 @@
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
         <area>3026</area>
+        <tipo>1</tipo>
     </challenge>
 </niveles>

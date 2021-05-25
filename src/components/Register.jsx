@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import styles from '../scss/Register.module.scss'
 
 const Register = ({state, setState}) => {
   const [user, setUser] = useState("")
@@ -38,27 +39,33 @@ const Register = ({state, setState}) => {
   const handleSumbit = (e) => {
     e.preventDefault()
     set()
-    setState([...state, {id: "5", nick: user, password: password}])
+    if(user === "admin")
+      alert("admin is already used")
+    else
+      setState([...state, {id: "5", nick: user, password: password}])
     setUser("")
     setPassword("")
   }
     
   return (
-    <form className="form" onSubmit={handleSumbit}>
-      <input
-          placeholder="User"
-          type="text"
-          onChange={(e) => setUser(e.target.value)}
-          value={user}
-      />
-      <input
-          placeholder="Password"
-          type="text"
-          onChange={(e) => setPassword(e.target.value)}
-          value={password}
-      />
-      <button>Hecho</button>
-    </form>
+    <div className={styles.container}>
+      <form className={styles.form} onSubmit={handleSumbit}>
+        <h1>Register</h1>
+        <input
+            placeholder="User"
+            type="text"
+            onChange={(e) => setUser(e.target.value)}
+            value={user}
+        />
+        <input
+            placeholder="Password"
+            type="password"
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
+        />
+        <button>Hecho</button>
+      </form>
+    </div>
   )
 }
 

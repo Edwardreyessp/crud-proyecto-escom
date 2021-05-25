@@ -104,6 +104,7 @@ const App = () => {
             {component === "" &&
               <div className={styles.login}>
                 <form className={styles.form} onSubmit={handleSumbit}>
+                  <h1>Login</h1>
                   <input
                       placeholder="User"
                       type="text"
@@ -112,11 +113,11 @@ const App = () => {
                   />
                   <input
                       placeholder="Password"
-                      type="text"
+                      type="password"
                       onChange={(e) => setinPassword(e.target.value)}
                       value={inpassword}
                   />
-                  <button>Ingresar</button>
+                  <button>Login</button>
                 </form>
               </div>}
           </Route>

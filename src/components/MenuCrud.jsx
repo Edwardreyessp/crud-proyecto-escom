@@ -39,6 +39,7 @@ const MenuCrud = () => {
               let x3pory2 = nivelXMLNode.children[index2].children[13].textContent
               let x3pory3 = nivelXMLNode.children[index2].children[14].textContent
               let area = nivelXMLNode.children[index2].children[15].textContent
+              let tipo = nivelXMLNode.children[index2].children[16].textContent
 
               libros = [...libros, {
                                     id: id,
@@ -57,7 +58,8 @@ const MenuCrud = () => {
                                     x3pory1: x3pory1,
                                     x3pory2: x3pory2,
                                     x3pory3: x3pory3,
-                                    area: area
+                                    area: area,
+                                    tipo: tipo
                                   }]
             })
             setState([...libros])
@@ -111,7 +113,12 @@ const MenuCrud = () => {
             </section>
           ))}
         </main>
-        : (Ver && <VerEjercicio state={state} idChallenge={idChallenge}/>)
+        : (Ver && <VerEjercicio
+                    state={state}
+                    idChallenge={idChallenge}
+                    setSomeButtom={setSomeButtom}
+                    setVer={setVer}
+                  />)
       }
     </div>
   )
