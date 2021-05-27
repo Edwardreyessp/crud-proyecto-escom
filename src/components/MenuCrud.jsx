@@ -42,6 +42,9 @@ const MenuCrud = () => {
               let x3pory3 = nivelXMLNode.children[index2].children[16].textContent
               let area = nivelXMLNode.children[index2].children[17].textContent
               let tipo = nivelXMLNode.children[index2].children[18].textContent
+              let incognita1 = nivelXMLNode.children[index2].children[19].textContent
+              let incognita2 = nivelXMLNode.children[index2].children[20].textContent
+              let incognita3 = nivelXMLNode.children[index2].children[21].textContent
 
               libros = [...libros, {
                                     id: id,
@@ -63,7 +66,10 @@ const MenuCrud = () => {
                                     x3pory2: x3pory2,
                                     x3pory3: x3pory3,
                                     area: area,
-                                    tipo: tipo
+                                    tipo: tipo,
+                                    incognita1: incognita1,
+                                    incognita2: incognita2,
+                                    incognita3: incognita3
                                   }]
             })
             setState([...libros])
