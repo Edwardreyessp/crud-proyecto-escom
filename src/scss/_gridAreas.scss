@@ -1,0 +1,53 @@
+.x1 {
+  grid-area: x1;
+  color: var(--color-x);
+}
+.x2 {
+  grid-area: x2;
+  color: var(--color-x);
+}
+.x3 {
+  grid-area: x3;
+  color: var(--color-x);
+}
+.xtotal {
+  grid-area: xtotal;
+  color: var(--color-x);
+}
+.y1 {
+  grid-area: y1;
+  color: var(--color-y);
+}
+.y2 {
+  grid-area: y2;
+  color: var(--color-y);
+}
+.y3 {
+  grid-area: y3;
+  color: var(--color-y);
+}
+.ytotal {
+  grid-area: ytotal;
+  color: var(--color-y);
+}
+.x1pory1 {
+  grid-area: x1pory1;
+  border: solid 1px black;
+}
+.x2pory1 {
+  grid-area: x2pory1;
+  border: solid 1px black;
+}
+.lVerde {
+  grid-area: lVerde;
+}
+.lMorada {
+  grid-area: lMorada;
+}
+.dimensions {
+  grid-area: dimensions;
+}
+.x {
+  grid-area: x;
+  color: black;
+}

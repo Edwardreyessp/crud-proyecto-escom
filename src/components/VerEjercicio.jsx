@@ -89,19 +89,51 @@ const VerEjercicio = ({state, idChallenge, setSomeButtom, setVer}) => {
       <button onClick={() => back()}>Volver</button>
       <button onClick={() => console.log(current.id)}>current</button>
       <h1>Let's Play</h1>
-      {current.tipo === "2x1" &&
-        <Ejercicio2x1
-          current={current}
-          styles={styles}
-          setInArea={setInArea}
-          inArea={inArea}
-          setInX1={setInX1}
-          inX1={inX1}
-          setInX2={setInX2}
-          inX2={inX2}
-          setInY1={setInY1}
-          inY1={inY1}/>
-      }
+      <section className={styles.container}>
+        {current.tipo === "2x1" &&
+          <Ejercicio2x1
+            current={current}
+            styles={styles}
+            setInX1={setInX1}
+            inX1={inX1}
+            setInX2={setInX2}
+            inX2={inX2}
+            setInY1={setInY1}
+            inY1={inY1}/>
+        }
+        <section className={styles.text2x1}>
+          <div className={styles.box1}>
+            <div className={styles.dimensions}>Dimensions</div>
+            <div className={styles.xtotal}>
+              {(current.incognita1 === "xtotal"
+              || current.incognita2 === "xtotal"
+              || current.incognita3 === "xtotal")
+              ? <div className={styles.emptyVerde}></div>
+              : current.xtotal}
+            </div>
+            <div className={styles.x}>X</div>
+            <div className={styles.y1}>
+              {(current.incognita1 === "ytotal"
+              || current.incognita2 === "ytotal"
+              || current.incognita3 === "ytotal")
+              ? <div className={styles.emptyMorado}></div>
+              : current.ytotal}
+            </div>
+          </div>
+          <div className={styles.box2}>
+            <div>Text area of model</div>
+            {(current.incognita1 === "area"
+              || current.incognita2 === "area"
+              || current.incognita3 === "area")
+              ? <input
+                type="text"
+                onChange={(e) => setInArea(e.target.value)}
+                value={inArea}
+              />
+              : current.area}
+          </div>
+        </section>
+      </section>
       <button
         className={styles.check}
         onClick={() => respuesta()}
