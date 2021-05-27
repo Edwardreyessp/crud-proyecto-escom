@@ -1,27 +1,28 @@
 import { useEffect, useState } from "react"
 import styles from '../scss/Ejercicio.module.scss'
 import Ejercicio2x1 from "./Ejercicio2x1"
+import Ejercicio2x2 from "./Ejercicio2x2"
 
 const VerEjercicio = ({state, idChallenge, setSomeButtom, setVer}) => {
   const [current, setCurrent] = useState([])
   const [inArea, setInArea] = useState("")
   const [inX1, setInX1] = useState("")
   const [inX2, setInX2] = useState("")
-  /* const [inX3, setInX3] = useState("") */
-  /* const [inXtotal, setInXtotal] = useState("") */
+  const [inX3, setInX3] = useState("")
+  //const [inXtotal, setInXtotal] = useState("")
   const [inY1, setInY1] = useState("")
-  /* const [inY2, setInY2] = useState("")
+  const [inY2, setInY2] = useState("")
   const [inY3, setInY3] = useState("")
-  const [inYtotal, setInYtotal] = useState("") */
-  /* const [inX1pory1, setInX1pory1] = useState("") */
+  //const [inYtotal, setInYtotal] = useState("") 
+  const [inX1pory1, setInX1pory1] = useState("") 
   const [inX1pory2, setInX1pory2] = useState("")
-  /*const [inX1pory3, setInX1pory3] = useState("") */
-  /* const [inX2pory1, setInX2pory1] = useState("") */
-  /* const [inX2pory2, setInX2pory2] = useState("")
-  const [inX2pory3, setInX2pory3] = useState("")
-  const [inX3pory1, setInX3pory1] = useState("")
-  const [inX3pory2, setInX3pory2] = useState("")
-  const [inX3pory3, setInX3pory3] = useState("") */
+  const [inX1pory3, setInX1pory3] = useState("") 
+  const [inX2pory1, setInX2pory1] = useState("") 
+  const [inX2pory2, setInX2pory2] = useState("")
+  //const [inX2pory3, setInX2pory3] = useState("")
+  //const [inX3pory1, setInX3pory1] = useState("")
+  //const [inX3pory2, setInX3pory2] = useState("")
+  const [inX3pory3, setInX3pory3] = useState("") 
   const [answer1, setAnswer1] = useState(false)
 
   useEffect(() => {
@@ -61,6 +62,13 @@ const VerEjercicio = ({state, idChallenge, setSomeButtom, setVer}) => {
     setVer(false)
   }
 
+  const Reproducir = ()=> {
+    var sonido = new Audio();
+    //sonido.src="good.mp3";
+    sonido.src="porfaborrame.mp3";
+    sonido.play();
+  }
+
   const respuesta = () => {
     if(current.id === "11")
       if(inArea === current.area)
@@ -68,9 +76,108 @@ const VerEjercicio = ({state, idChallenge, setSomeButtom, setVer}) => {
     if(current.id === "12")
       if(inX1pory2 === current.x1pory2)
         setAnswer1(true)
+    if(current.id === "13")
+      if(inArea === current.area)
+        setAnswer1(true)
+    if(current.id === "14")
+      if(inX1pory2 === current.x1pory2)
+        setAnswer1(true)
+    if(current.id === "15")
+      if(inX1pory1=== current.x1pory1)
+        setAnswer1(true)
+    if(current.id === "16")
+      if(inArea === current.area)
+        setAnswer1(true)
+    if(current.id === "21")
+      if(inX1pory1 === current.x1pory1 && inX2pory2 === current.x2pory2)
+        setAnswer1(true)
+    if(current.id === "22")
+      if(inX1pory2 === current.x1pory2 && inArea === current.area)
+        setAnswer1(true)
+    if(current.id === "23")
+      if(setInX2pory1 === current.x2pory1 && inX3pory3 === current.x3pory3)
+        setAnswer1(true)
+    if(current.id === "24")
+      if(inX2pory1 === current.x2pory1 && inX2pory1 === current.x2pory1 )
+        setAnswer1(true)
+    if(current.id === "25")
+      if(inX1pory3 === current.x1pory3 && inX2pory2 === current.x2pory2)
+        setAnswer1(true)
+    if(current.id === "26")
+      if(inX1pory2 === current.x1pory2 && inX2pory1 === current.x2pory1)
+        setAnswer1(true)
+    if(current.id === "31")
+      if(inY2 === current.y2 && inY1 === current.y1)
+        setAnswer1(true)
+    if(current.id ==="32")
+      if(inX1 === current.x1 && inY2 === current.y2)
+        setAnswer1(true)
+    if(current.id === "33")
+      if(inX2 === current.x2 && inY2=== current.y2)
+        setAnswer1(true)
     if(current.id === "34")
       if(inX1 === current.x1 && inX2 === current.x2)
         setAnswer1(true)
+    if(current.id==="35")
+      if(inY1===current.y1 && inY2===current.y2)
+        setAnswer1(true)
+    if(current.id === "36")
+        if(inX1 === current.x1 && inX2 === current.x2)
+        setAnswer1(true)
+    if(current.id === "41")
+      if(inX1 === current.x1 && inX2 === current.x2 && inX3 === current.x3)
+        setAnswer1(true)
+    if(current.id === "42")
+      if(inX1 === current.x1 && inX3 ===current.x3 && inY1=== current.y1)
+        setAnswer1(true)
+    if(current.id === "43")
+      if(inX2 === current.x2 && inY2 === current.y2 && inY3 === current.y3)
+        setAnswer1(true)
+    if(current.id === "44")
+      if(inX1 === current.x1 && inX3 === current.x3 && inX1 === current.x1)
+        setAnswer1(true)
+    if(current.id === "45")
+      if(inX1 === current.x1 && inY2 === current.y2 && inY1 === current.y1)
+        setAnswer1(true)
+    if(current.id === "46")
+      if(inX2 === current.x2 && inX3 === current.x3 &&inY1 === current.y1)
+      setAnswer1(true)
+    if(current.id === "51")
+      if(inX1 === current.x1 && inY1 === current.y1)
+        setAnswer1(true)
+    if(current.id==="52")
+      if(inX2 === current.x2 && inY1 === current.y1)
+        setAnswer1(true)
+    if(current.id === "53")
+      if(inX1=== current.x1 && inY1 === current.y1)
+      setAnswer1(true)
+      if(current.id === "54")
+        if(inX1 === current.x1 && inY2 === current.y2 )
+          setAnswer1(true)
+      if(current.id === "55")
+        if(inX1 === current.x1 && inY2 === current.y2)
+          setAnswer1(true)
+      if(current.id === "56")
+        if(inX1 === current.x1 && inY1 === current.y1)
+          setAnswer1(true)
+      if(current.id ==="61")
+        if(inX1 === current.x1 && inY1 === current.y1 && inY2 === current.y2)
+          setAnswer1(true)
+      if(current.id === "62")
+        if(inX1 === current.x1 && inX2 === current.x2 && inY2 === current.y2)
+          setAnswer1(true)
+      if(current.id === "63")
+        if(inX1 === current.x1 && inX2 === current.x2 && inY2 === current.y2)
+          setAnswer1(true)
+      if(current.id === "64")
+        if(inX1 === current.x1 && inX2 === current.x2 && inY1 === current.y1)
+          setAnswer1(true)
+      if(current.id === "65")
+        if(inX1 === current.x1 && inX2 === current.x2 && inY2 === current.y2)
+          setAnswer1(true)
+      if(current.id === "66")
+        if(inX1 === current.x1 && inX2 === current.x2 && inY1 === current.y1)
+          setAnswer1(true)            
   }
   /*
     2x1
@@ -95,12 +202,39 @@ const VerEjercicio = ({state, idChallenge, setSomeButtom, setVer}) => {
             current={current}
             styles={styles}
             setInX1={setInX1}
-            inX1={inX1}
             setInX2={setInX2}
-            inX2={inX2}
             setInY1={setInY1}
-            inY1={inY1}/>
+            setInX1pory1={setInX1pory1}
+            setInX2pory1={setInX1pory2} 
+            inX1={inX1}
+            inX2={inX2}
+            inY1={inY1}
+            inX1pory1={inX1pory1}
+            inX2pory1={inX1pory1}/>
+          
         }
+        {/*current.tipo === "2x2" &&
+          <Ejercicio2x2
+          current={current}
+          styles={styles}
+          setInX1={setInX1}
+          setInX2={setInX2}
+          setInY1={setInY1}
+          setInY2={setInY2}
+          setInX1pory1={setInX1pory1}
+          setInX1pory2={setInX1pory2}
+          setInX2pory1={setInX2pory1}
+          setInX2pory2={setInX2pory2} 
+          inX1={inX1}
+          inX2={inX2}
+          inY1={inY1}
+          inY2={inY2}
+          inX1pory1={inX1pory1}
+          inX2pory1={inX1pory1}
+          inX2pory1={inX2pory1}
+          inX2pory2={inX2pory2}
+          />*/
+      }
         <section className={styles.text2x1}>
           <div className={styles.box1}>
             <div className={styles.dimensions}>Dimensions</div>
@@ -139,7 +273,8 @@ const VerEjercicio = ({state, idChallenge, setSomeButtom, setVer}) => {
         onClick={() => respuesta()}
       >Check
       </button>
-      {answer1 && <h1>Right!😀</h1>}
+      {answer1 && Reproducir() }
+      {answer1 && <h1>Right!😀</h1> }
     </div>
   )
 }
