@@ -295,8 +295,8 @@
         <xtotal></xtotal>
         <y1>30</y1><!-- icognita-->
         <y2>7</y2><!-- icognita-->
-        <ytotal>37</ytotal>
         <y3></y3>
+        <ytotal>37</ytotal>
         <x1pory1>270</x1pory1>
         <x1pory2>?</x1pory2>
         <x1pory3></x1pory3>
@@ -313,15 +313,15 @@
         <incognita3></incognita3>
     </challenge>
     <challenge id ="32">
-        <x1>8</x1><!-- icognita-->
+        <x1>7</x1>
         <x2></x2>
         <x3></x3>
-        <xtotal>?</xtotal><!-- icognita-->
-        <y1>80</y1>
-        <y2>9</y2><!-- icognita-->
+        <xtotal>7</xtotal>
+        <y1>20</y1> <!-- incógnita -->
+        <y2>5</y2><!-- icognita-->
         <y3></y3>
-        <ytotal>89</ytotal>
-        <x1pory1>640</x1pory1>
+        <ytotal>25</ytotal>
+        <x1pory1>140</x1pory1>
         <x1pory2>?</x1pory2>
         <x1pory3></x1pory3>
         <x2pory1></x2pory1>
@@ -330,9 +330,9 @@
         <x3pory1></x3pory1>
         <x3pory2></x3pory2>
         <x3pory3></x3pory3>
-        <area>712</area>
+        <area>175</area>
         <tipo>1x2</tipo>
-        <incognita1>x1</incognita1>
+        <incognita1>y1</incognita1>
         <incognita2>y2</incognita2>
         <incognita3></incognita3>
     </challenge>

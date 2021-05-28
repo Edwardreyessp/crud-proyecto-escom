@@ -96,7 +96,7 @@ const ProbarEjercicio = ({state, idChallenge, setSomeButtom, setProbar}) => {
       if(inX1pory2 === current.x1pory2 && inArea === current.area)
         setAnswer1(true)
     if(current.id === "23")
-      if(setInX2pory1 === current.x2pory1 && inX3pory3 === current.x3pory3)
+      if(inX2pory1 === current.x2pory1 && inX3pory3 === current.x3pory3)
         setAnswer1(true)
     if(current.id === "24")
       if(inX1pory2 === current.x1pory2 && inX2pory1 === current.x2pory1 )
@@ -111,7 +111,7 @@ const ProbarEjercicio = ({state, idChallenge, setSomeButtom, setProbar}) => {
       if(inY2 === current.y2 && inY1 === current.y1)
         setAnswer1(true)
     if(current.id ==="32")
-      if(inX1 === current.x1 && inY2 === current.y2)
+      if(inY1 === current.y1 && inY2 === current.y2)
         setAnswer1(true)
     if(current.id === "33")
       if(inX2 === current.x2 && inY2=== current.y2)
@@ -194,7 +194,7 @@ const ProbarEjercicio = ({state, idChallenge, setSomeButtom, setProbar}) => {
   return (
     <div>
       <button onClick={() => back()}>Volver</button>
-      <button onClick={() => console.log(current.tipo)}>current</button>
+      <button onClick={() => console.log(current)}>current</button>
       <h1>Let's Play</h1>
       <section className={styles.container}>
         {current.tipo === "2x1" &&
