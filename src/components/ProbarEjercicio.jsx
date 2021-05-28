@@ -99,7 +99,7 @@ const ProbarEjercicio = ({state, idChallenge, setSomeButtom, setProbar}) => {
       if(setInX2pory1 === current.x2pory1 && inX3pory3 === current.x3pory3)
         setAnswer1(true)
     if(current.id === "24")
-      if(inX2pory1 === current.x2pory1 && inX2pory1 === current.x2pory1 )
+      if(inX1pory2 === current.x1pory2 && inX2pory1 === current.x2pory1 )
         setAnswer1(true)
     if(current.id === "25")
       if(inX1pory3 === current.x1pory3 && inX2pory2 === current.x2pory2)
@@ -135,7 +135,7 @@ const ProbarEjercicio = ({state, idChallenge, setSomeButtom, setProbar}) => {
       if(inX2 === current.x2 && inY2 === current.y2 && inY3 === current.y3)
         setAnswer1(true)
     if(current.id === "44")
-      if(inX1 === current.x1 && inX3 === current.x3 && inX1 === current.x1)
+      if(inX1 === current.x1 && inX3 === current.x3 && inY1 === current.y1)
         setAnswer1(true)
     if(current.id === "45")
       if(inX1 === current.x1 && inY2 === current.y2 && inY1 === current.y1)
@@ -177,7 +177,7 @@ const ProbarEjercicio = ({state, idChallenge, setSomeButtom, setProbar}) => {
       if(inX1 === current.x1 && inX2 === current.x2 && inY2 === current.y2)
         setAnswer1(true)
     if(current.id === "66")
-      if(inX1 === current.x1 && inX2 === current.x2 && inY1 === current.y1)
+      if(inX1 === current.x1 && inY2 === current.y2 && inY1 === current.y1)
         setAnswer1(true)            
   }
   /*

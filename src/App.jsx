@@ -11,6 +11,7 @@ import {
 import Register from "./components/Register"
 import styles from './scss/App.module.scss'
 import "./scss/main.scss"
+import Usario from "./components/Usario"
 
 let xmlContent = ''
 let nicks = []
@@ -173,8 +174,8 @@ const App = () => {
             <Link to="/register" className={styles.link}
             onClick={() => setLogin(true)}>
               <div>
-                Sing in
-                <i className="fas fa-sign-in-alt"></i>
+                Create an Account
+                <i className="fas fa-user-plus"></i>
               </div>
             </Link>
           }
@@ -183,7 +184,7 @@ const App = () => {
           {/* <Route path="/Proyecto/index.html"> */}
           <Route exact path="/">
             {component === "MenuCrud" && <MenuCrud crud={crud}/>}
-            {component === "usuario" && <h1>Modo usuario</h1>}
+            {component === "usuario" && <Usario/>}
             {component === "" &&
               <div className={styles.login}>
                 <form className={styles.form} onSubmit={handleSumbit}>

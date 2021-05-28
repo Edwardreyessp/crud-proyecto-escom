@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import styles from '../scss/Register.module.scss'
+import swal from 'sweetalert'
+import { nanoid } from "nanoid"
 
 const Register = ({state, setState}) => {
   const [user, setUser] = useState("")
@@ -19,7 +21,7 @@ const Register = ({state, setState}) => {
           let xmlNick = document.createElement('nick')
           let xmlPassword = document.createElement('password')
 
-          xmlUser.setAttribute("id", "5")
+          xmlUser.setAttribute("id", nanoid(2))
           xmlNick.innerText = user
           xmlPassword.innerText = password
 
@@ -39,12 +41,21 @@ const Register = ({state, setState}) => {
   const handleSumbit = (e) => {
     e.preventDefault()
     set()
-    if(user === "admin")
-      alert("admin is already used")
-    else
-      setState([...state, {id: "5", nick: user, password: password}])
+    
+      state.map(({nick}) => {
+      if(user === "admin")swal("¡No es posible usar admin!", "Intente de Nuevo", "error");
+      else if(user === nick)swal("¡Usario Registrado!", "Intente de Nuevo", "error");
+      else {
+        if(password !== ""){ 
+        setState([...state, {id:nanoid(2), nick: user, password: password}])
+        swal("¡Usario Registrado!", "Bienvenido", "success");}
+        else swal("¡Datos incompletos!", "Intente de Nuevo", "error");
+        };
+      return "";
+     }) 
     setUser("")
     setPassword("")
+   
   }
     
   return (
