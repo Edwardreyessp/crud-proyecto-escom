@@ -9,3 +9,29 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin lMorada {
+  background-image: url("../img/LineaMorada.png");
+  width: 100%;
+  height: 2rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+@mixin lVerde {
+  background-image: url("../img/LineaVerde.png");
+  width: 2rem;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+@mixin x {
+  color: var(--color-x);
+  margin-right: 0.5rem;
+}
+
+@mixin y {
+  color: var(--color-y);
+  margin-bottom: 0.5rem;
+}

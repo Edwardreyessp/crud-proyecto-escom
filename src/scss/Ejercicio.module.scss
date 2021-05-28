@@ -1,6 +1,12 @@
 @import "mixins";
 @import "gridAreas";
 @import "cuadrado2x1";
+@import "cuadrado2x2";
+@import "cuadrado2x3";
+@import "cuadrado3x2";
+@import "cuadrado3x3";
+@import "cuadrado1x2";
+@import "cuadrado1x3";
 
 input {
   width: 4rem;
@@ -26,7 +32,9 @@ input {
 
     .box1 {
       @include displayGrid;
-      grid-template-areas: "dimensions dimensions dimensions" "xtotal x y1";
+      grid-template-areas:
+        "dimensions dimensions dimensions"
+        "xtotal x ytotal";
       text-align: center;
       margin: 1rem 0;
       border: 2px solid black;
@@ -34,9 +42,8 @@ input {
       padding: 1rem 3rem;
 
       .xtotal {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include displayFlex;
+
         .emptyVerde {
           width: 100%;
           height: 1rem;
@@ -45,7 +52,7 @@ input {
         }
       }
 
-      .y1 {
+      .ytotal {
         @include displayFlex;
 
         .emptyMorado {

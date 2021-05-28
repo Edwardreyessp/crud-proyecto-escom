@@ -1,14 +1,14 @@
 .x1 {
   grid-area: x1;
-  color: var(--color-x);
+  @include x;
 }
 .x2 {
   grid-area: x2;
-  color: var(--color-x);
+  @include x;
 }
 .x3 {
   grid-area: x3;
-  color: var(--color-x);
+  @include x;
 }
 .xtotal {
   grid-area: xtotal;
@@ -16,15 +16,15 @@
 }
 .y1 {
   grid-area: y1;
-  color: var(--color-y);
+  @include y;
 }
 .y2 {
   grid-area: y2;
-  color: var(--color-y);
+  @include y;
 }
 .y3 {
   grid-area: y3;
-  color: var(--color-y);
+  @include y;
 }
 .ytotal {
   grid-area: ytotal;
@@ -34,8 +34,36 @@
   grid-area: x1pory1;
   border: solid 1px black;
 }
+.x1pory2 {
+  grid-area: x1pory2;
+  border: solid 1px black;
+}
+.x1pory3 {
+  grid-area: x1pory3;
+  border: solid 1px black;
+}
 .x2pory1 {
   grid-area: x2pory1;
+  border: solid 1px black;
+}
+.x2pory2 {
+  grid-area: x2pory2;
+  border: solid 1px black;
+}
+.x2pory3 {
+  grid-area: x2pory3;
+  border: solid 1px black;
+}
+.x3pory1 {
+  grid-area: x3pory1;
+  border: solid 1px black;
+}
+.x3pory2 {
+  grid-area: x3pory2;
+  border: solid 1px black;
+}
+.x3pory3 {
+  grid-area: x3pory3;
   border: solid 1px black;
 }
 .lVerde {

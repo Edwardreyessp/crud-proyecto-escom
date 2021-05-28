@@ -1,0 +1,41 @@
+.cuadrado2x2 {
+  @include displayGrid;
+  grid-template-areas: "a a a ytotal ytotal" "a a a lMorada lMorada" "a a a y1 y2" "xtotal lVerde x1 x1pory1 x1pory2" "xtotal lVerde x2 x2pory1 x2pory2";
+  padding: 10px;
+
+  div {
+    @include displayFlex;
+  }
+
+  div:nth-child(2) {
+    @include lMorada;
+  }
+
+  div:nth-child(6) {
+    @include lVerde;
+  }
+
+  div:nth-child(8) {
+    width: 20rem;
+    height: 6rem;
+    padding: 2rem;
+  }
+
+  div:nth-child(9) {
+    width: 10rem;
+    height: 6rem;
+    padding: 2rem;
+  }
+
+  div:nth-child(11) {
+    width: 20rem;
+    height: 0.9rem;
+    padding: 2rem;
+  }
+
+  div:nth-child(12) {
+    width: 10rem;
+    height: 0.9rem;
+    padding: 2rem;
+  }
+}

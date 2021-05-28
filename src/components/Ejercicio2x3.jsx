@@ -1,7 +1,7 @@
-const Ejercicio2x2 =({current, styles, setInX1, setInX2, setInY1, setInY2, setInX1pory1, setInX1pory2, setInX2pory1, setInX2pory2, inX1, inX2, inY1, inY2, inX1pory1, inX1pory2, inX2pory1, inX2pory2}) =>{
+const Ejercicio2x3 = ({current, styles, setInX1, setInY1, setInY2, setInX1pory2, setInX1pory3, setInX2pory2, inX1, inY1, inY2, inX1pory2, inX1pory3, inX2pory2}) => {
   return (
     <>
-      <section className={styles.cuadrado2x2}>
+      <section className={styles.cuadrado2x3}>
         <div className={styles.ytotal}>{current.ytotal}</div>
         <div className={styles.lMorada}></div>
         <div className={styles.y1}>
@@ -26,6 +26,7 @@ const Ejercicio2x2 =({current, styles, setInX1, setInX2, setInY1, setInY2, setIn
             />
             : current.y2}
         </div>
+        <div className={styles.y3}>{current.y3}</div>
         <div className={styles.xtotal}>{current.xtotal}</div>
         <div className={styles.lVerde}></div>
         <div className={styles.x1}>
@@ -39,17 +40,7 @@ const Ejercicio2x2 =({current, styles, setInX1, setInX2, setInY1, setInY2, setIn
             />
             : current.x1}
         </div>
-        <div className={styles.x1pory1}>
-          {(current.incognita1 === "x1pory1"
-            || current.incognita2 === "x1pory1"
-            || current.incognita3 === "x1pory1")
-            ? <input
-              type="text"
-              onChange={(e) => setInX1pory1(e.target.value)}
-              value={inX1pory1}
-            />
-            : current.x1pory1}
-        </div>
+        <div className={styles.x1pory1}>{current.x1pory1}</div>
         <div className={styles.x1pory2}>
           {(current.incognita1 === "x1pory2"
             || current.incognita2 === "x1pory2"
@@ -61,28 +52,19 @@ const Ejercicio2x2 =({current, styles, setInX1, setInX2, setInY1, setInY2, setIn
             />
             : current.x1pory2}
         </div>
-        <div className={styles.x2}>
-          {(current.incognita1 === "x2"
-            || current.incognita2 === "x2"
-            || current.incognita3 === "x2")
+        <div className={styles.x1pory3}>
+          {(current.incognita1 === "x1pory3"
+            || current.incognita2 === "x1pory3"
+            || current.incognita3 === "x1pory3")
             ? <input
               type="text"
-              onChange={(e) => setInX2(e.target.value)}
-              value={inX2}
+              onChange={(e) => setInX1pory3(e.target.value)}
+              value={inX1pory3}
             />
-            : current.x2pory1}
+            : current.x1pory3}
         </div>
-        <div className={styles.x2pory1}>
-          {(current.incognita1 === "x2pory1"
-            || current.incognita2 === "x2pory1"
-            || current.incognita3 === "x2pory1")
-            ? <input
-              type="text"
-              onChange={(e) => setInX2pory1(e.target.value)}
-              value={inX2pory1}
-            />
-            : current.x2pory1}
-        </div>
+        <div className={styles.x2}>{current.x2}</div>
+        <div className={styles.x2pory1}>{current.x2pory1}</div>
         <div className={styles.x2pory2}>
           {(current.incognita1 === "x2pory2"
             || current.incognita2 === "x2pory2"
@@ -94,9 +76,10 @@ const Ejercicio2x2 =({current, styles, setInX1, setInX2, setInY1, setInY2, setIn
             />
             : current.x2pory2}
         </div>
+        <div className={styles.x2pory3}>{current.x2pory3}</div>
       </section>
     </>
   )
 }
 
-export default Ejercicio2x2
+export default Ejercicio2x3
