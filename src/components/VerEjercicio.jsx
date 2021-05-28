@@ -16,15 +16,13 @@ const VerEjercicio = ({state, idChallenge, setSomeButtom, setVer}) => {
   const [inX3, setInX3] = useState("")
   const [inY1, setInY1] = useState("")
   const [inY2, setInY2] = useState("")
+  // eslint-disable-next-line
   const [inY3, setInY3] = useState("")
   const [inX1pory1, setInX1pory1] = useState("")
   const [inX1pory2, setInX1pory2] = useState("")
   const [inX1pory3, setInX1pory3] = useState("")
   const [inX2pory1, setInX2pory1] = useState("")
   const [inX2pory2, setInX2pory2] = useState("")
-  //const [inX2pory3, setInX2pory3] = useState("")
-  //const [inX3pory1, setInX3pory1] = useState("")
-  //const [inX3pory2, setInX3pory2] = useState("")
   const [inX3pory3, setInX3pory3] = useState("")
   const [answer1, setAnswer1] = useState(false)
 
