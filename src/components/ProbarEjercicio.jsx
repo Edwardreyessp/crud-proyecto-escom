@@ -280,6 +280,8 @@ const ProbarEjercicio = ({state, idChallenge, setSomeButtom, setProbar}) => {
             inY1={inY1}
             inX2pory1={inX2pory1}
             inX1pory3={inX3pory3}
+            setInX3pory3={setInX3pory3}
+            inX3pory3={inX3pory3}
           />
         }
         {current.tipo === "1x2" &&

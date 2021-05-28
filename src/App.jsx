@@ -183,7 +183,7 @@ const App = () => {
         <Switch>
           {/* <Route path="/Proyecto/index.html"> */}
           <Route exact path="/">
-            {component === "MenuCrud" && <MenuCrud crud={crud}/>}
+            {component === "MenuCrud" && <MenuCrud crud={crud} setCrud={setCrud}/>}
             {component === "usuario" && <Usario/>}
             {component === "" &&
               <div className={styles.login}>

@@ -1,4 +1,4 @@
-const Ejercicio3x3 = ({current, styles, setInX1, setInX2, setInY1, setInX2pory1, setInX1pory3, inX1, inX2, inY1, inX2pory1, inX1pory3}) => {
+const Ejercicio3x3 = ({current, styles, setInX1, setInX2, setInY1, setInX2pory1, setInX1pory3, inX1, inX2, inY1, inX2pory1, inX1pory3,setInX3pory3,inX3pory3}) => {
   return (
     <>
       <section className={styles.cuadrado3x3}>
@@ -70,7 +70,17 @@ const Ejercicio3x3 = ({current, styles, setInX1, setInX2, setInY1, setInX2pory1,
         <div className={styles.x3}>{current.x3}</div>
         <div className={styles.x3pory1}>{current.x3pory1}</div>
         <div className={styles.x3pory2}>{current.x3pory2}</div>
-        <div className={styles.x3pory3}>{current.x3pory3}</div>
+        <div className={styles.x3pory3}>
+        {(current.incognita1 === "x3pory3"
+            || current.incognita2 === "x3pory3"
+            || current.incognita3 === "x3pory3")
+            ? <input
+              type="text"
+              onChange={(e) => setInX3pory3(e.target.value)}
+              value={inX3pory3}
+            />
+            : current.x3pory3}
+        </div>
       </section>
     </>
   )

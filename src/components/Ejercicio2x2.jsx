@@ -70,7 +70,7 @@ const Ejercicio2x2 =({current, styles, setInX1, setInX2, setInY1, setInY2, setIn
               onChange={(e) => setInX2(e.target.value)}
               value={inX2}
             />
-            : current.x2pory1}
+            : current.x2}
         </div>
         <div className={styles.x2pory1}>
           {(current.incognita1 === "x2pory1"

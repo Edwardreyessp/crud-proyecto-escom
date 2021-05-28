@@ -3,7 +3,7 @@ import styles from '../scss/MenuCrud.module.scss'
 import ProbarEjercicio from "./ProbarEjercicio"
 import VerEjercicio from "./VerEjercicio"
 
-const MenuCrud = ({crud}) => {
+const MenuCrud = ({crud,setCrud}) => {
   const [someButtom, setSomeButtom] = useState(false)
   const [idChallenge, setIdChallenge] = useState(0)
   const [probar, setProbar] = useState(false)
@@ -19,6 +19,12 @@ const MenuCrud = ({crud}) => {
     setVer(true)
     setSomeButtom(true)
     setIdChallenge(id)
+  }
+
+  const DeleteMap = (id) => {
+    const newCrud = crud.filter(cruds => cruds.id !== id);
+    setCrud(newCrud);
+    <MenuCrud/>
   }
 
   return (
@@ -38,7 +44,7 @@ const MenuCrud = ({crud}) => {
                   Ver ejercicio
                 </button>
                 <button>Modificar ejercicio</button>
-                <button>Eliminar ejercicio</button>
+                <button onClick={() =>DeleteMap(id)}>Eliminar ejercicio</button>
                 <button onClick={() => setProbarEjercicio(id)}>
                   Probar ejercicio
                 </button>

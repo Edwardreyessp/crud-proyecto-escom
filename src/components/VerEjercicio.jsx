@@ -122,7 +122,7 @@ const VerEjercicio = ({crud, idChallenge, setSomeButton, setVer}) => {
                 || current.incognita2 === "x2"
                 || current.incognita3 === "x2")
                 ? "R: " + current.x2pory1
-                : current.x2pory1}
+                : current.x2}
             </div>
             <div className={styles.x2pory1}>
               {(current.incognita1 === "x2pory1"
@@ -288,7 +288,13 @@ const VerEjercicio = ({crud, idChallenge, setSomeButton, setVer}) => {
             <div className={styles.x3}>{current.x3}</div>
             <div className={styles.x3pory1}>{current.x3pory1}</div>
             <div className={styles.x3pory2}>{current.x3pory2}</div>
-            <div className={styles.x3pory3}>{current.x3pory3}</div>
+            <div className={styles.x3pory3}>
+            {(current.incognita1 === "x3pory3"
+                || current.incognita2 === "x3pory3"
+                || current.incognita3 === "x3pory3")
+                ? "R: " + current.x3pory3
+                : current.x3pory3}
+            </div>
           </section>
         }
         {current.tipo === "1x2" &&
