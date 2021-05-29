@@ -1,82 +1,139 @@
 import { useEffect, useState } from "react"
-import styles from "../scss/Ejercicio.module.scss";
+import styles from "../scss/Ejercicio.module.scss"
 
 
-const ModificarEjercicio = ({crud,idChallenge,setSomeButton,setModificar}) => {
-    const [current,setCurrent]= useState([]);
-    const [modX1,setModX1]=useState(false);
-    const [modX2,setModX2]=useState(false);
-    const [modX3,setModX3]=useState(false);
-    const [modXtotl,setModXtotal]=useState(false);
-    const [modY1,setModY1]=useState(false);
-    const [modY2,setModY2]=useState(false);
-    const [modY3,setModY3]=useState(false);
-    const [modYtotal,setModYtotal]=useState(false);
-    const [modX1Y1,setModX1Y1]=useState(false);
-    const [modX2Y1,setModX2Y1]=useState(false);
-    const [modX3Y1,setModX3Y1]=useState(false);
-    const [modX1Y2,setModX1Y2]=useState(false);
-    const [modX2Y2,setModX2Y2]=useState(false);
-    const [modX3Y2,setModX3Y2]=useState(false);
-    const [modX1Y3,setModX1Y3]=useState(false);
-    const [modX2Y3,setModX2Y3]=useState(false);
-    const [modX3Y3,setModX3Y3]=useState(false);
-    const [modArea,setmodArea]=useState(false);
+const ModificarEjercicio = ({crud,idChallenge,setSomeButton,setModificar, setCrud}) => {
+    const [current,setCurrent]= useState([])
+    /* const [modX1,setModX1]=useState(false)
+    const [modX2,setModX2]=useState(false)
+    const [modX3,setModX3]=useState(false) */
+    const [modXtotal,setModXtotal]=useState(false)
+    const [modY1,setModY1]=useState(false)
+    /* const [modY2,setModY2]=useState(false)
+    const [modY3,setModY3]=useState(false)
+    const [modYtotal,setModYtotal]=useState(false)
+    const [modX1Y1,setModX1Y1]=useState(false)
+    const [modX2Y1,setModX2Y1]=useState(false)
+    const [modX3Y1,setModX3Y1]=useState(false)
+    const [modX1Y2,setModX1Y2]=useState(false)
+    const [modX2Y2,setModX2Y2]=useState(false)
+    const [modX3Y2,setModX3Y2]=useState(false)
+    const [modX1Y3,setModX1Y3]=useState(false)
+    const [modX2Y3,setModX2Y3]=useState(false)
+    const [modX3Y3,setModX3Y3]=useState(false)
+    const [modArea,setmodArea]=useState(false) */
+    const [inY1, setInY1] = useState("")
+    const [inXtotal, setInXtotal] = useState("")
+    const [ayuda, setAyuda] = useState(false)
     
     const back = () => {
-        setSomeButton(false)
-        setModificar(false)
+      setSomeButton(false)
+      setModificar(false)
     }
-   
+  
     useEffect(() => {
-        crud.map(({id, x1, x2, x3, xtotal, y1, y2, y3, ytotal, x1pory1, x1pory2, x1pory3, x2pory1, x2pory2, x2pory3, x3pory1, x3pory2, x3pory3, area, tipo, incognita1, incognita2, incognita3}) => (
-          id === idChallenge &&
-            setCurrent({
-              id: id,
-              x1: x1,
-              x2: x2,
-              x3: x3,
-              xtotal: xtotal,
-              y1: y1,
-              y2: y2,
-              y3: y3,
-              ytotal: ytotal,
-              x1pory1: x1pory1,
-              x1pory2: x1pory2,
-              x1pory3: x1pory3,
-              x2pory1: x2pory1,
-              x2pory2: x2pory2,
-              x2pory3: x2pory3,
-              x3pory1: x3pory1,
-              x3pory2: x3pory2,
-              x3pory3: x3pory3,
-              area: area,
-              tipo: tipo,
-              incognita1: incognita1,
-              incognita2: incognita2,
-              incognita3: incognita3
-            })
+      crud.map(({id, x1, x2, x3, xtotal, y1, y2, y3, ytotal, x1pory1, x1pory2, x1pory3, x2pory1, x2pory2, x2pory3, x3pory1, x3pory2, x3pory3, area, tipo, incognita1, incognita2, incognita3}) => (
+        id === idChallenge &&
+          setCurrent({
+            id: id,
+            x1: x1,
+            x2: x2,
+            x3: x3,
+            xtotal: xtotal,
+            y1: y1,
+            y2: y2,
+            y3: y3,
+            ytotal: ytotal,
+            x1pory1: x1pory1,
+            x1pory2: x1pory2,
+            x1pory3: x1pory3,
+            x2pory1: x2pory1,
+            x2pory2: x2pory2,
+            x2pory3: x2pory3,
+            x3pory1: x3pory1,
+            x3pory2: x3pory2,
+            x3pory3: x3pory3,
+            area: area,
+            tipo: tipo,
+            incognita1: incognita1,
+            incognita2: incognita2,
+            incognita3: incognita3
+          })
         ))
         // eslint-disable-next-line
-      }, [])  
-   
+    }, [])
+
+    const mY1 = () =>{
+      setCurrent({...current, y1: inY1})
+      const newCrud = crud.map(item => {
+        if(item.id === current.id) {
+          return {...current}
+        }
+        else return item
+      })
+      setCrud(newCrud)
+      setModY1(false)
+      if(ayuda) setAyuda(false)
+      else setAyuda(true)
+    }
+
+    const mXtotal = () =>{
+      setCurrent({...current, xtotal: inXtotal})
+      const newCrud = crud.map(item => {
+        if(item.id === current.id) {
+          return {...current}
+        }
+        else return item
+      })
+      setCrud(newCrud)
+      setModXtotal(false)
+      if(ayuda) setAyuda(false)
+      else setAyuda(true)
+    }
+
     return (
-<div>
+    <div>
       <button onClick={() => back()}>Volver</button>
+      <button onClick={() => console.log(current)}>current</button>
+      <button onClick={() => console.log(crud)}>crud</button>
       <h1>Let's start</h1>
       <section className={styles.container}>
         {current.tipo === "2x1" &&
           <section className={styles.cuadrado2x1}>
             <div className={styles.lVerde}></div>
             <div className={styles.lMorada}></div>
-            <div className={styles.xtotal}>{current.xtotal}</div>
+            <div className={styles.xtotal}>
+              {!modXtotal ? current.xtotal
+                : <input
+                    type="text"
+                    onChange={(e) => setInXtotal(e.target.value)}
+                    value={inXtotal}
+                  />}
+              {!modXtotal
+                ? <button onClick={() => setModXtotal(true)}>Change</button>
+                : <button onClick={() => mXtotal()}>Save</button>}
+              {ayuda && mXtotal()}
+            </div>
             <div className={styles.y1}>
               {(current.incognita1 === "y1"
                 || current.incognita2 === "y1"
                 || current.incognita3 === "y1")
-                ? "R: " + current.y1
-                : current.y1}
-                <button onClick={() =>()}></button>
+                ? (!modY1 ? "R: " + current.y1
+                  : <input
+                      type="text"
+                      onChange={(e) => setInY1(e.target.value)}
+                      value={inY1}
+                    />)
+                : (!modY1 ? current.y1
+                  : <input
+                      type="text"
+                      onChange={(e) => setInY1(e.target.value)}
+                      value={inY1}
+                    />)}
+              {!modY1 
+                ? <button onClick={() => setModY1(true)}>Change</button>
+                : <button onClick={() => mY1()}>Save</button>}
+                {ayuda && mY1()}
             </div>
             <div className={styles.x1}>
               {(current.incognita1 === "x1"

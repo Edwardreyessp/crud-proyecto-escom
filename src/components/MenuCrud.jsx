@@ -94,6 +94,7 @@ const MenuCrud = ({crud,setCrud}) => {
             idChallenge={idChallenge}
             setSomeButton={setSomeButtom}
             setModificar={setModificar}
+            setCrud={setCrud}
             />)  
         )
       }

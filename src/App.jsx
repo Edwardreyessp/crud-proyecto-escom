@@ -16,7 +16,10 @@ import Usario from "./components/Usario"
 let xmlContent = ''
 let nicks = []
 let refresh = ''
+let refresh2 = ''
 refresh = 'a'
+refresh2 = 'a'
+let libros = []
 
 const App = () => {
   const [crud, setCrud] = useState([])
@@ -25,11 +28,10 @@ const App = () => {
   const [inpassword, setinPassword] = useState("")
   const [component, setComponent] = useState("")
   const [login, setLogin] = useState(false)
-  let libros = []
   let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
 
-  const set = async () => {
-    await fetch("CRUD.xml").then((response) => {
+  useEffect(() => {
+    fetch("CRUD.xml").then((response) => {
       response.text().then((xml) => {
         xmlContent = xml
 
@@ -90,15 +92,12 @@ const App = () => {
             }]
           })
           setCrud([...libros])
+          console.log("Hola");
         })
       })
     })
-  }
-
-  useEffect(() => {
-    set()
     // eslint-disable-next-line
-  },[])
+  },[refresh2])
 
   useEffect(() => {
     fetch("Users.xml").then((response) => {
@@ -161,14 +160,14 @@ const App = () => {
     <Router>
       <main className={styles.container}>
         <section className={styles.enlaces}>
-          {/* <Link to="/Proyecto/index.html" onClick={() => reset()}>Home</Link> */}
-          <Link to="/" className={styles.link}
+          <Link to="/Proyecto/index.html" onClick={() => reset()}>Home</Link>
+          {/* <Link to="/" className={styles.link}
             onClick={() => reset()}>
             <div>
               <i className="fas fa-home"></i>
               Home
             </div>
-          </Link>
+          </Link> */}
           <div>Logo bien mamalón</div>
           {!login && 
             <Link to="/register" className={styles.link}
@@ -181,8 +180,8 @@ const App = () => {
           }
         </section>
         <Switch>
-          {/* <Route path="/Proyecto/index.html"> */}
-          <Route exact path="/">
+          <Route path="/Proyecto/index.html">
+          {/* <Route exact path="/"> */}
             {component === "MenuCrud" && <MenuCrud crud={crud} setCrud={setCrud}/>}
             {component === "usuario" && <Usario/>}
             {component === "" &&
