@@ -161,14 +161,14 @@ const App = () => {
       <main className={styles.container}>
         <section className={styles.enlaces}>
           {/* <Link to="/Proyecto/index.html" onClick={() => reset()}>Home</Link> */}
-          <Link to="/build/index.html" onClick={() => reset()}>Home</Link>
-          {/* <Link to="/" className={styles.link}
+          {/*<Link to="/build/index.html" onClick={() => reset()}>Home</Link>*/}
+           <Link to="/" className={styles.link}
             onClick={() => reset()}>
             <div>
               <i className="fas fa-home"></i>
               Home
             </div>
-          </Link> */}
+          </Link> 
           <div>Logo bien mamalón</div>
           {!login && 
             <Link to="/register" className={styles.link}
@@ -182,8 +182,8 @@ const App = () => {
         </section>
         <Switch>
           {/* <Route path="/Proyecto/index.html"> */}
-          <Route path="/build/index.html">
-          {/* <Route exact path="/"> */}
+          {/*<Route path="/build/index.html">*/}
+           <Route exact path="/"> 
             {component === "MenuCrud" && <MenuCrud crud={crud} setCrud={setCrud}/>}
             {component === "usuario" && <Usario/>}
             {component === "" &&
