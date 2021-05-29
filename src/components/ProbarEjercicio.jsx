@@ -144,22 +144,22 @@ const ProbarEjercicio = ({state, idChallenge, setSomeButtom, setProbar}) => {
       if(inX2 === current.x2 && inX3 === current.x3 &&inY1 === current.y1)
       setAnswer1(true)
     if(current.id === "51")
-      if(inX1 === current.x1 && inY1 === current.y1)
+      if(inY1 === current.y1)
         setAnswer1(true)
     if(current.id==="52")
-      if(inX2 === current.x2 && inY1 === current.y1)
+      if(inX2 === current.x2 )
         setAnswer1(true)
     if(current.id === "53")
-      if(inX1=== current.x1 && inY1 === current.y1)
+      if( inY1 === current.y1)
       setAnswer1(true)
     if(current.id === "54")
-      if(inX1 === current.x1 && inY2 === current.y2 )
+      if( inY2 === current.y2 )
         setAnswer1(true)
     if(current.id === "55")
-      if(inX1 === current.x1 && inY2 === current.y2)
+      if( inY2 === current.y2)
         setAnswer1(true)
     if(current.id === "56")
-      if(inX1 === current.x1 && inY1 === current.y1)
+      if( inY1 === current.y1)
         setAnswer1(true)
     if(current.id ==="61")
       if(inX1 === current.x1 && inY1 === current.y1 && inY2 === current.y2)
@@ -241,12 +241,16 @@ const ProbarEjercicio = ({state, idChallenge, setSomeButtom, setProbar}) => {
             setInX1={setInX1}
             setInY1={setInY1}
             setInY2={setInY2}
+            setInY3={setInY3}
+            setInX2={setInX2}
             setInX1pory2={setInX1pory2}
             setInX1pory3={setInX1pory3}
             setInX2pory2={setInX2pory2}
             inX1={inX1}
             inY1={inY1}
             inY2={inY2}
+            inY3={inY3}
+            inX2={inX2}
             inX1pory2={inX1pory2}
             inX1pory3={inX1pory3}
             inX2pory2={inX2pory2}

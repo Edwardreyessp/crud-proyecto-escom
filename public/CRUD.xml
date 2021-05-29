@@ -490,7 +490,7 @@
         <y3>4</y3><!-- icognita-->
         <ytotal>764</ytotal>
         <x1pory1>7000</x1pory1>
-        <x1pory2>6000</x1pory2>
+        <x1pory2>600</x1pory2>
         <x1pory3>40</x1pory3>
         <x2pory1>350</x2pory1>
         <x2pory2>?</x2pory2>
@@ -577,7 +577,7 @@
         <incognita3>y1</incognita3>
     </challenge>
     <challenge id ="51">
-        <x1>4</x1><!-- icognita-->
+        <x1>?</x1><!-- icognita-->
         <x2></x2>
         <x3></x3>
         <xtotal>4</xtotal>
@@ -596,7 +596,7 @@
         <x3pory3></x3pory3>
         <area>88</area>
         <tipo>1x2</tipo>
-        <incognita1>x1</incognita1>
+        <incognita1></incognita1>
         <incognita2>y1</incognita2>
         <incognita3></incognita3>
     </challenge>
@@ -621,7 +621,7 @@
         <area>171</area>
         <tipo>2x1</tipo>
         <incognita1>x2</incognita1>
-        <incognita2>y1</incognita2>
+        <incognita2></incognita2>
         <incognita3></incognita3>
     </challenge>
     <challenge id ="53">
@@ -644,7 +644,7 @@
         <x3pory3></x3pory3>
         <area>384</area>
         <tipo>1x2</tipo>
-        <incognita1>x1</incognita1>
+        <incognita1></incognita1>
         <incognita2>y1</incognita2>
         <incognita3></incognita3>
     </challenge>
@@ -668,7 +668,7 @@
         <x3pory3></x3pory3>
         <area>4823</area>
         <tipo>1x3</tipo>
-        <incognita1>x1</incognita1>
+        <incognita1></incognita1>
         <incognita2>y2</incognita2>
         <incognita3></incognita3>
     </challenge>
@@ -692,7 +692,7 @@
         <x3pory3></x3pory3>
         <area>930</area>
         <tipo>1x3</tipo>
-        <incognita1>x1</incognita1>
+        <incognita1></incognita1>
         <incognita2>y2</incognita2>
         <incognita3></incognita3>
     </challenge>
@@ -716,7 +716,7 @@
         <x3pory3></x3pory3>
         <area>1256</area>
         <tipo>1x3</tipo>
-        <incognita1>x1</incognita1>
+        <incognita1></incognita1>
         <incognita2>y1</incognita2>
         <incognita3></incognita3>
     </challenge>

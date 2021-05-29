@@ -41,7 +41,7 @@ const Ejercicio2x1 = ({current, styles, setInX1, setInX2, setInY1, inX1, inX2, i
             />
             : current.x2}
         </div>
-        <div className={styles.x2pory1}>{current.xtotal}</div>
+        <div className={styles.x2pory1}>{current.x2pory1}</div>
       </section>
     </>
   )

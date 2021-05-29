@@ -2,15 +2,24 @@ import { useState } from "react"
 import styles from '../scss/MenuCrud.module.scss'
 import ProbarEjercicio from "./ProbarEjercicio"
 import VerEjercicio from "./VerEjercicio"
+import swal from 'sweetalert'
+import ModificarEjercicio from "./ModificarEjercicio"
 
 const MenuCrud = ({crud,setCrud}) => {
   const [someButtom, setSomeButtom] = useState(false)
+  const [modificar,setModificar]=useState(false)
   const [idChallenge, setIdChallenge] = useState(0)
   const [probar, setProbar] = useState(false)
   const [ver, setVer] = useState(false)
 
   const setProbarEjercicio = (id) => {
     setProbar(true)
+    setSomeButtom(true)
+    setIdChallenge(id)
+  }
+
+  const Modificar = (id) =>{
+    setModificar(true)
     setSomeButtom(true)
     setIdChallenge(id)
   }
@@ -22,9 +31,23 @@ const MenuCrud = ({crud,setCrud}) => {
   }
 
   const DeleteMap = (id) => {
-    const newCrud = crud.filter(cruds => cruds.id !== id);
-    setCrud(newCrud);
-    <MenuCrud/>
+    swal({
+      title: "Estas seguro?",
+      text: "Una vez que borres este ejercicio no podra ser recuperado!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        swal("Listo! Se ah borrado el Ejercicio!", {
+          icon: "success",
+        });
+        const newCrud = crud.filter(cruds => cruds.id !== id);
+        setCrud(newCrud);
+        <MenuCrud/>
+      } 
+    });
   }
 
   return (
@@ -43,7 +66,7 @@ const MenuCrud = ({crud,setCrud}) => {
                 <button onClick={() => setVerEjercicio(id)}>
                   Ver ejercicio
                 </button>
-                <button>Modificar ejercicio</button>
+                <button onClick={() => Modificar(id)}>Modificar ejercicio</button>
                 <button onClick={() =>DeleteMap(id)}>Eliminar ejercicio</button>
                 <button onClick={() => setProbarEjercicio(id)}>
                   Probar ejercicio
@@ -66,6 +89,12 @@ const MenuCrud = ({crud,setCrud}) => {
               setSomeButton={setSomeButtom}
               setVer={setVer}
             />)
+          || (modificar && <ModificarEjercicio
+            crud={crud}
+            idChallenge={idChallenge}
+            setSomeButton={setSomeButtom}
+            setModificar={setModificar}
+            />)  
         )
       }
     </div>
