@@ -73,7 +73,7 @@ const VerEjercicio = ({crud, idChallenge, setSomeButton, setVer}) => {
                 ? "R: " + current.x2
                 : current.x2}
             </div>
-            <div className={styles.x2pory1}>{current.xtotal}</div>
+            <div className={styles.x2pory1}>{current.x2pory1}</div>
           </section>
         }
         {current.tipo === "2x2" &&
@@ -121,7 +121,7 @@ const VerEjercicio = ({crud, idChallenge, setSomeButton, setVer}) => {
               {(current.incognita1 === "x2"
                 || current.incognita2 === "x2"
                 || current.incognita3 === "x2")
-                ? "R: " + current.x2pory1
+                ? "R: " + current.x2
                 : current.x2}
             </div>
             <div className={styles.x2pory1}>
@@ -158,7 +158,13 @@ const VerEjercicio = ({crud, idChallenge, setSomeButton, setVer}) => {
                 ? "R: " + current.y2
                 : current.y2}
             </div>
-            <div className={styles.y3}>{current.y3}</div>
+            <div className={styles.y3}>
+            {(current.incognita1 === "y3"
+                || current.incognita2 === "y3"
+                || current.incognita3 === "y3")
+                ? "R: " + current.y3
+                : current.y3}
+            </div>
             <div className={styles.xtotal}>{current.xtotal}</div>
             <div className={styles.lVerde}></div>
             <div className={styles.x1}>
@@ -183,7 +189,12 @@ const VerEjercicio = ({crud, idChallenge, setSomeButton, setVer}) => {
                 ? "R: " + current.x1pory3
                 : current.x1pory3}
             </div>
-            <div className={styles.x2}>{current.x2}</div>
+            <div className={styles.x2}> 
+              {(current.incognita1 === "x2"
+                || current.incognita2 === "x2"
+                || current.incognita3 === "x2")
+                ? "R: " + current.x2
+                : current.x2}</div>
             <div className={styles.x2pory1}>{current.x2pory1}</div>
             <div className={styles.x2pory2}>
               {(current.incognita1 === "x2pory2"
@@ -285,7 +296,13 @@ const VerEjercicio = ({crud, idChallenge, setSomeButton, setVer}) => {
             </div>
             <div className={styles.x2pory2}>{current.x2pory2}</div>
             <div className={styles.x2pory3}>{current.x2pory3}</div>
-            <div className={styles.x3}>{current.x3}</div>
+            <div className={styles.x3}>
+              {(current.incognita1 === "x3"
+                || current.incognita2 === "x3"
+                || current.incognita3 === "x3")
+                ? "R: " + current.x3
+                : current.x3}
+            </div>
             <div className={styles.x3pory1}>{current.x3pory1}</div>
             <div className={styles.x3pory2}>{current.x3pory2}</div>
             <div className={styles.x3pory3}>
