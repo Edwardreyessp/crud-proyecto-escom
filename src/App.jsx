@@ -160,7 +160,8 @@ const App = () => {
     <Router>
       <main className={styles.container}>
         <section className={styles.enlaces}>
-          <Link to="/Proyecto/index.html" onClick={() => reset()}>Home</Link>
+          {/* <Link to="/Proyecto/index.html" onClick={() => reset()}>Home</Link> */}
+          <Link to="/build/index.html" onClick={() => reset()}>Home</Link>
           {/* <Link to="/" className={styles.link}
             onClick={() => reset()}>
             <div>
@@ -180,7 +181,8 @@ const App = () => {
           }
         </section>
         <Switch>
-          <Route path="/Proyecto/index.html">
+          {/* <Route path="/Proyecto/index.html"> */}
+          <Route path="/build/index.html">
           {/* <Route exact path="/"> */}
             {component === "MenuCrud" && <MenuCrud crud={crud} setCrud={setCrud}/>}
             {component === "usuario" && <Usario/>}
