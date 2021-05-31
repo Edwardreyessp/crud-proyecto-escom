@@ -4,13 +4,15 @@ import ProbarEjercicio from "./ProbarEjercicio"
 import VerEjercicio from "./VerEjercicio"
 import swal from 'sweetalert'
 import ModificarEjercicio from "./ModificarEjercicio"
+import CrearEjercicio from "./CrearEjercicio"
 
 const MenuCrud = ({crud,setCrud}) => {
   const [someButtom, setSomeButtom] = useState(false)
   const [modificar,setModificar]=useState(false)
-  const [idChallenge, setIdChallenge] = useState(0)
-  const [probar, setProbar] = useState(false)
-  const [ver, setVer] = useState(false)
+  const [idChallenge,setIdChallenge] = useState(0)
+  const [probar,setProbar] = useState(false)
+  const [ver,setVer] = useState(false)
+  const [crear,setCrear] = useState(false)
 
   const setProbarEjercicio = (id) => {
     setProbar(true)
@@ -28,6 +30,12 @@ const MenuCrud = ({crud,setCrud}) => {
     setVer(true)
     setSomeButtom(true)
     setIdChallenge(id)
+  }
+
+  
+  const Crear = () => {
+    setCrear(true)
+    setSomeButtom(true)
   }
 
   const DeleteMap = (id) => {
@@ -56,6 +64,9 @@ const MenuCrud = ({crud,setCrud}) => {
         <section className={styles.header}>
           <div>Ejercicio</div>
           <div>Acciones</div>
+        </section>
+        <section>
+        <button onClick={() => Crear()}>Crear un nuevo ejercicio</button>
         </section>
           {crud.map(({id}) => (
             <section key={id} className={styles.lista}>
@@ -95,7 +106,13 @@ const MenuCrud = ({crud,setCrud}) => {
             setSomeButton={setSomeButtom}
             setModificar={setModificar}
             setCrud={setCrud}
-            />)  
+            />) 
+          ||(crear && <CrearEjercicio
+            crud={crud}
+            setSomeButton={setSomeButtom}
+            setCrear={setCrear}
+            setCrud={setCrud}
+          />) 
         )
       }
     </div>
