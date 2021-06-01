@@ -596,8 +596,8 @@
         <x3pory3></x3pory3>
         <area>88</area>
         <tipo>1x2</tipo>
-        <incognita1></incognita1>
-        <incognita2>y1</incognita2>
+        <incognita1>y1</incognita1>
+        <incognita2></incognita2>
         <incognita3></incognita3>
     </challenge>
     <challenge id ="52">
@@ -644,8 +644,8 @@
         <x3pory3></x3pory3>
         <area>384</area>
         <tipo>1x2</tipo>
-        <incognita1></incognita1>
-        <incognita2>y1</incognita2>
+        <incognita1>y1</incognita1>
+        <incognita2></incognita2>
         <incognita3></incognita3>
     </challenge>
     <challenge id ="54">
@@ -668,8 +668,8 @@
         <x3pory3></x3pory3>
         <area>4823</area>
         <tipo>1x3</tipo>
-        <incognita1></incognita1>
-        <incognita2>y2</incognita2>
+        <incognita1>y2</incognita1>
+        <incognita2></incognita2>
         <incognita3></incognita3>
     </challenge>
     <challenge id ="55">
@@ -692,8 +692,8 @@
         <x3pory3></x3pory3>
         <area>930</area>
         <tipo>1x3</tipo>
-        <incognita1></incognita1>
-        <incognita2>y2</incognita2>
+        <incognita1>y2</incognita1>
+        <incognita2></incognita2>
         <incognita3></incognita3>
     </challenge>
     <challenge id ="56">
@@ -716,8 +716,8 @@
         <x3pory3></x3pory3>
         <area>1256</area>
         <tipo>1x3</tipo>
-        <incognita1></incognita1>
-        <incognita2>y1</incognita2>
+        <incognita1>y1</incognita1>
+        <incognita2></incognita2>
         <incognita3></incognita3>
     </challenge>
     <challenge id ="61">
