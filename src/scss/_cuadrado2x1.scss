@@ -3,6 +3,11 @@
   grid-template-areas: "a a a y1" "a a a lMorada" "xtotal lVerde x1 x1pory1" " xtotal lVerde x2 x2pory1";
   padding: 10px;
 
+  button {
+    width: 2.5rem;
+    outline: none;
+  }
+
   .lMorada {
     margin-bottom: 0.5rem;
   }

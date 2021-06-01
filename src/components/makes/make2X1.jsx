@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid"
 import { useState } from "react"
 import styles from "../../scss/Ejercicio.module.scss"
 
@@ -19,7 +20,7 @@ const Make2X1 = ({setCrud, crud}) => {
   
   const handleSumbit = () => {
     setCrud([...crud, { 
-      id: "67",
+      id: nanoid(2),
       x1: inX1,
       x2: inX2,
       x3: "",
@@ -62,6 +63,7 @@ const Make2X1 = ({setCrud, crud}) => {
     setIncognita1("")
     setIncognita2("")
     setIncognita3("")
+    alert("Guardado exitósamente")
   }
 
   const setVar1 = () => {
@@ -215,28 +217,40 @@ const Make2X1 = ({setCrud, crud}) => {
         <div className={styles.box1}>
           <div className={styles.dimensions}>Dimensions</div>
           <div className={styles.xtotal}>
-            <div className={styles.emptyVerde}></div>
+            {inXtotal === ""
+              ? <div className={styles.emptyVerde}></div>
+              : inXtotal
+            }
           </div>
           <div className={styles.x}>X</div>
           <div className={styles.ytotal}>
-            <div className={styles.emptyMorado}></div>
+            {inYtotal === ""
+              ? <div className={styles.emptyMorado}></div>
+              : inYtotal
+            }
           </div>
         </div>
         <div className={styles.box2}>
           <div>Text area of model</div>
-          R:
-          <input
-            type="text"
-            onChange={(e) => setInArea(e.target.value)}
-            value={inArea}
-          />
-          {!(answer1 && answer2 && answer3) && (answer4
-            ? <button onClick={() => resetVar4()}>Reset</button>
-            : <button onClick={() => setVar4()}>Set</button>)
-          }
+          <div>
+            R:
+            <input
+              type="text"
+              onChange={(e) => setInArea(e.target.value)}
+              value={inArea}
+            />
+            {!(answer1 && answer2 && answer3) && (answer4
+              ? <button onClick={() => resetVar4()}>Reset</button>
+              : <button onClick={() => setVar4()}>Set</button>)
+            }
+          </div>
         </div>
+      <button
+        className={styles.save}
+        onClick={() => handleSumbit()}>
+        Save
+      </button>
       </section>
-      <button onClick={() => handleSumbit()}>Save</button>
     </>
   )
 }
