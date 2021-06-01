@@ -28,6 +28,7 @@ const App = () => {
   const [inpassword, setinPassword] = useState("")
   const [component, setComponent] = useState("")
   const [login, setLogin] = useState(false)
+  const [logout, setLogout] = useState(false)
   let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
 
   useEffect(() => {
@@ -131,6 +132,7 @@ const App = () => {
   const handleSumbit = (e) => {
     e.preventDefault()
     let  entrada = true
+    setLogout(true)
     state.map(({nick, password}) => {
       if(nick === "admin" && password === "1234" && nick === user && password === inpassword) {
         setComponent("MenuCrud")
@@ -152,6 +154,7 @@ const App = () => {
   }
 
   const reset = () => {
+    setLogout(false)
     setComponent("")
     setLogin(false)
   }
@@ -162,14 +165,14 @@ const App = () => {
         <section className={styles.enlaces}>
           {/* <Link to="/Proyecto/index.html" onClick={() => reset()}>Home</Link> */}
           {/*<Link to="/build/index.html" onClick={() => reset()}>Home</Link>*/}
-           <Link to="/" className={styles.link}
+          <Link to="/" className={styles.link}
             onClick={() => reset()}>
             <div>
               <i className="fas fa-home"></i>
-              Home
+              {logout ? "Log out" : "Home"}
             </div>
           </Link> 
-          <div><i class="fas fa-book-dead"></i> EduSquare</div>
+          <div><i className="fas fa-book-dead"></i> EduSquare</div>
           {!login && 
             <Link to="/register" className={styles.link}
             onClick={() => setLogin(true)}>
@@ -183,7 +186,7 @@ const App = () => {
         <Switch>
           {/* <Route path="/Proyecto/index.html"> */}
           {/*<Route path="/build/index.html">*/}
-           <Route exact path="/"> 
+          <Route exact path="/"> 
             {component === "MenuCrud" && <MenuCrud crud={crud} setCrud={setCrud}/>}
             {component === "usuario" && <Usario/>}
             {component === "" &&

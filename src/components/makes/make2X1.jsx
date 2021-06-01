@@ -150,8 +150,6 @@ const Make2X1 = ({setCrud, crud}) => {
 
   return (
     <>
-      <button onClick={() => handleSumbit()}>Save</button>
-      <button onClick={() => console.log(crud)}>Crud</button>
       <section className={styles.cuadrado2x1}>
         <div className={styles.lVerde}></div>
         <div className={styles.lMorada}></div>
@@ -238,6 +236,7 @@ const Make2X1 = ({setCrud, crud}) => {
           }
         </div>
       </section>
+      <button onClick={() => handleSumbit()}>Save</button>
     </>
   )
 }
