@@ -1,8 +1,9 @@
 import { useState } from "react"
 import Make2X1 from "./makes/make2X1"
 import Make2X2 from "./makes/make2x2"
+import styles from "../scss/Ejercicio.module.scss"
 
-const CrearEjercicio = (crud,setSomeButton,setCrear,setCrud) => {
+const CrearEjercicio = ({crud, setCrear, setCrud, setSomeButton}) => {
     
     const [maM2x1, setmaM2x1] = useState(false)
     const [maM2x2, setMaM2x2] = useState(false)
@@ -14,12 +15,11 @@ const CrearEjercicio = (crud,setSomeButton,setCrear,setCrud) => {
 
 
     const back = () => {
-        setSomeButton(false);
-        setCrear(false);
-      }
+        setSomeButton(false)
+        setCrear(false)
+    }
     
     const M2x1 =() =>{
-        alert('2x1')
         setmaM2x1(true);
     }
     const M2x2 =() =>{
@@ -42,24 +42,22 @@ const CrearEjercicio = (crud,setSomeButton,setCrear,setCrud) => {
         alert('1x3')
     }
     return (
-        <div>
-            <button onClick={() => back()}>Volver</button>
-            <h1>Agregar Ejecicio</h1>
-            <button onClick={() =>M2x1()}>Cuadro 2x1</button>
-            <button onClick={() =>M2x2()}>Cuadro 2x2</button>
-            <button onClick={() =>M2x3()}>Cuadro 2x3</button>
-            <button onClick={() =>M3x2()}>Cuadro 3x2</button>
-            <button onClick={() =>M3x3()}>Cuadro 3x3</button>
-            <button onClick={() =>M1x2()}>Cuadro 2x1</button>
-            <button onClick={() =>M1x3()}>Cuadro 2x1</button>
-            <section>
-                { ((maM2x1 && <Make2X1/>)
-                || (maM2x2 && <Make2X2/>
-                )) }
-            </section>
-        </div>
-
-            
+      <div>
+        <button onClick={() => back()}>Volver</button>
+        <h1>Agregar Ejecicio</h1>
+        <button onClick={() =>M2x1()}>Cuadro 2x1</button>
+        <button onClick={() =>M2x2()}>Cuadro 2x2</button>
+        <button onClick={() =>M2x3()}>Cuadro 2x3</button>
+        <button onClick={() =>M3x2()}>Cuadro 3x2</button>
+        <button onClick={() =>M3x3()}>Cuadro 3x3</button>
+        <button onClick={() =>M1x2()}>Cuadro 2x1</button>
+        <button onClick={() =>M1x3()}>Cuadro 2x1</button>
+        <section className={styles.container}>
+          { ((maM2x1 && <Make2X1 setCrud={setCrud} crud={crud}/>)
+          || (maM2x2 && <Make2X2 setCrud={setCrud} crud={crud}/>
+          )) }
+        </section>
+      </div>
     )
 }
 

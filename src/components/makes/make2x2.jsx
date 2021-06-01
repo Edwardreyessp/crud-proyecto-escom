@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const Make2X2 = () => {
+const Make2X2 = ({setCrud, crud}) => {
     const [inX1, setInX1] = useState("")
     const [inX2, setInX2] = useState("")
     const [inY1, setInY1] = useState("")
@@ -25,9 +25,8 @@ const Make2X2 = () => {
        // setSomeButtom(false);
       }
     
-    const handleSumbit = (e) => {
-        e.preventDefault();
-        /*setCrud([{ 
+    const handleSumbit = () => {
+        setCrud([...crud, { 
         id: "67",
         x1: inX1,
         x2: inX2,
@@ -50,7 +49,7 @@ const Make2X2 = () => {
         tipo: inTipo,
         incognita1: incognita1,
         incognita2: incognita2,
-        incognita3: incognita3}, ...crud]);
+        incognita3: incognita3}]);
         setInX1("");
         setInX2("");
         setInY1("");
@@ -62,7 +61,7 @@ const Make2X2 = () => {
         setInTipo("");
         setIncognita1("");
         setIncognita2("");
-        setIncognita3("");*/
+        setIncognita3("");
         setInX1("");
         setInX2("");
         setInY1("");
@@ -79,7 +78,9 @@ const Make2X2 = () => {
     
     return (
         <div>
-            <button onClick={(e) => back()}>Volver</button>
+            <button onClick={() => back()}>Volver</button>
+            <button onClick={() => console.log(crud)}>crud</button>
+            <button onClick={() => handleSumbit()}>handle</button>
             <h1>Agregar Ejecicio</h1>
             <form onSubmit={handleSumbit}>
             <h3>X1</h3>

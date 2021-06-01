@@ -31,7 +31,7 @@ const MenuCrud = ({crud,setCrud}) => {
     setSomeButtom(true)
     setIdChallenge(id)
   }
-
+  
   
   const Crear = () => {
     setCrear(true)
@@ -61,12 +61,10 @@ const MenuCrud = ({crud,setCrud}) => {
   return (
     <div className={styles.containerCrud}>
       {!someButtom ? <main className={styles.crud}>
+        <button onClick={() => Crear()}>Crear un nuevo ejercicio</button>
         <section className={styles.header}>
           <div>Ejercicio</div>
           <div>Acciones</div>
-        </section>
-        <section>
-        <button onClick={() => Crear()}>Crear un nuevo ejercicio</button>
         </section>
           {crud.map(({id}) => (
             <section key={id} className={styles.lista}>
@@ -107,12 +105,13 @@ const MenuCrud = ({crud,setCrud}) => {
             setModificar={setModificar}
             setCrud={setCrud}
             />) 
-          ||(crear && <CrearEjercicio
-            crud={crud}
-            setSomeButton={setSomeButtom}
-            setCrear={setCrear}
-            setCrud={setCrud}
-          />) 
+          ||(crear && 
+            <CrearEjercicio
+              crud={crud}
+              setCrear={setCrear}
+              setCrud={setCrud}
+              setSomeButton={setSomeButtom}
+            />) 
         )
       }
     </div>
