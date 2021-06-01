@@ -169,7 +169,7 @@ const App = () => {
               Home
             </div>
           </Link> 
-          <div>Logo bien mamalón</div>
+          <div><i class="fas fa-book-dead"></i> EduSquare</div>
           {!login && 
             <Link to="/register" className={styles.link}
             onClick={() => setLogin(true)}>

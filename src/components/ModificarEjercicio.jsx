@@ -398,7 +398,7 @@ const ModificarEjercicio = ({crud,idChallenge,setSomeButton,setModificar, setCru
                   : <input
                       type="text"
                       onChange={(e) => setInX2(e.target.value)}
-                      value={inY1}
+                      value={inX2}
                     />)
                 : (!modX2 ? current.x2
                   : <input
