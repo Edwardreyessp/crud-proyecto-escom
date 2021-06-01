@@ -319,8 +319,8 @@ const ProbarEjercicio = ({state, idChallenge, setSomeButtom, setProbar}) => {
           setAnswer1(true)
       setAnswer2(true)
       setAnswer3(true)
-      setSong(true)
     }
+    setSong(true)
   }
 
   return (
