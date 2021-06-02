@@ -50,19 +50,6 @@ const Make2X1 = ({setCrud, crud}) => {
     setInX1Y1("")
     setInX2Y1("")
     setInArea("")
-    setIncognita1("")
-    setIncognita2("")
-    setIncognita3("")
-    setInX1("")
-    setInX2("")
-    setInXtotal("")
-    setInYtotal("")
-    setInX1Y1("")
-    setInX2Y1("")
-    setInArea("")
-    setIncognita1("")
-    setIncognita2("")
-    setIncognita3("")
     alert("Guardado exitósamente")
   }
 
@@ -245,11 +232,11 @@ const Make2X1 = ({setCrud, crud}) => {
             }
           </div>
         </div>
-      <button
-        className={styles.save}
-        onClick={() => handleSumbit()}>
-        Save
-      </button>
+        <button
+          className={styles.save}
+          onClick={() => handleSumbit()}>
+          Save
+        </button>
       </section>
     </>
   )
