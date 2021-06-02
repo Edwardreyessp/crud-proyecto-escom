@@ -1,4 +1,3 @@
-import { render } from "@testing-library/react"
 import { useEffect, useState } from "react"
 import styles from '../../scss/Ejercicio.module.scss'
 import Ejercicio1x2 from "../Ejercicio1x2"
@@ -11,9 +10,8 @@ import Ejercicio3x3 from "../Ejercicio3x3"
 import Felicidades from "../Felicidades"
 
 const Nivel1 = ({crud, setStar1,Star1}) => {
-    const [superado, setSuperado] = useState(0)
+  const [superado, setSuperado] = useState(0)
   const [current, setCurrent] = useState([])
-  const [inArea, setInArea] = useState("")
   const [inX1, setInX1] = useState("")
   const [inX2, setInX2] = useState("")
   const [inX3, setInX3] = useState("")
@@ -26,6 +24,7 @@ const Nivel1 = ({crud, setStar1,Star1}) => {
   const [inX2pory1, setInX2pory1] = useState("")
   const [inX2pory2, setInX2pory2] = useState("")
   const [inX3pory3, setInX3pory3] = useState("")
+  const [inArea, setInArea] = useState("")
   const [answer1, setAnswer1] = useState(false)
   const [answer2, setAnswer2] = useState(false)
   const [answer3, setAnswer3] = useState(false)
@@ -62,7 +61,7 @@ const Nivel1 = ({crud, setStar1,Star1}) => {
         })
     ))
     // eslint-disable-next-line
-  }, [])
+  }, [crudPosition])
 
 
   const Reproducir = ()=> {
@@ -321,186 +320,197 @@ const Nivel1 = ({crud, setStar1,Star1}) => {
     }
     setSong(true)
   }
-
-  const Refresh = () =>{
-    return("");
-  }
   
-  const Refresh2 = () =>{
-    
+  const Refresh = () => {
     setSong(false)
     setAnswer1(false)
     setAnswer2(false)
     setAnswer3(false)
-    
-}
+    setcrudPosition(crudPosition + 1)
+    setInX1("")
+    setInX2("")
+    setInX3("")
+    setInY1("")
+    setInY2("")
+    setInY3("")
+    setInX1pory2("")
+    setInX1pory3("")
+    setInX2pory1("")
+    setInX2pory2("")
+    setInX3pory3("")
+    setInArea("")
+  }
 
   return (
     <div>
-      <h1>Let's Play</h1>
-      <button onClick={() =>console.log(crudPosition)}>Crup</button>
-      <section className={styles.container}>
-        {current.tipo === "2x1" &&
-          <Ejercicio2x1
-            current={current}
-            styles={styles}
-            setInX1={setInX1}
-            setInX2={setInX2}
-            setInY1={setInY1}
-            setInX1pory1={setInX1pory1}
-            setInX2pory1={setInX1pory2} 
-            inX1={inX1}
-            inX2={inX2}
-            inY1={inY1}
-            inX1pory1={inX1pory1}
-            inX2pory1={inX1pory1}/>
-        }
-        {current.tipo === "2x2" &&
-          <Ejercicio2x2
-            current={current}
-            styles={styles}
-            setInX1={setInX1}
-            setInX2={setInX2}
-            setInY1={setInY1}
-            setInY2={setInY2}
-            setInX1pory1={setInX1pory1}
-            setInX1pory2={setInX1pory2}
-            setInX2pory1={setInX2pory1}
-            setInX2pory2={setInX2pory2}
-            inX1={inX1}
-            inX2={inX2}
-            inY1={inY1}
-            inY2={inY2}
-            inX1pory1={inX1pory1}
-            inX1pory2={inX1pory2}
-            inX2pory1={inX2pory1}
-            inX2pory2={inX2pory2}
-          />
-        }
-        {current.tipo === "2x3" &&
-          <Ejercicio2x3
-            current={current}
-            styles={styles}
-            setInX1={setInX1}
-            setInY1={setInY1}
-            setInY2={setInY2}
-            setInY3={setInY3}
-            setInX2={setInX2}
-            setInX1pory2={setInX1pory2}
-            setInX1pory3={setInX1pory3}
-            setInX2pory2={setInX2pory2}
-            inX1={inX1}
-            inY1={inY1}
-            inY2={inY2}
-            inY3={inY3}
-            inX2={inX2}
-            inX1pory2={inX1pory2}
-            inX1pory3={inX1pory3}
-            inX2pory2={inX2pory2}
-          />
-        }
-        {current.tipo === "3x2" &&
-          <Ejercicio3x2
-            current={current}
-            styles={styles}
-            setInX1={setInX1}
-            setInX2={setInX2}
-            setInX3={setInX3}
-            setInY1={setInY1}
-            inX1={inX1}
-            inX2={inX2}
-            inX3={inX3}
-            inY1={inY1}
-          />
-        }
-        {current.tipo === "3x3" &&
-          <Ejercicio3x3
-            current={current}
-            styles={styles}
-            setInX1={setInX1}
-            setInX3={setInX3}
-            setInY1={setInY1}
-            setInX2pory1={setInX2pory1}
-            setInX1pory3={setInX3pory3}
-            inX1={inX1}
-            inX3={inX3}
-            inY1={inY1}
-            inX2pory1={inX2pory1}
-            inX1pory3={inX3pory3}
-            setInX3pory3={setInX3pory3}
-            inX3pory3={inX3pory3}
-          />
-        }
-        {current.tipo === "1x2" &&
-          <Ejercicio1x2
-            current={current}
-            styles={styles}
-            setInY1={setInY1}
-            setInY2={setInY2}
-            setInX1pory2={setInX1pory2}
-            inY1={inY1}
-            inY2={inY2}
-            inX1pory2={inX1pory2}
-          />
-        }
-        {current.tipo === "1x3" &&
-          <Ejercicio1x3
-            current={current}
-            styles={styles}
-            setInY1={setInY1}
-            setInY2={setInY2}
-            setInX1pory1={setInX1pory1}
-            inY1={inY1}
-            inY2={inY2}
-            inX1pory1={inX1pory1}
-          />
-        }
-        <section className={styles.text2x1}>
-          <div className={styles.box1}>
-            <div className={styles.dimensions}>Dimensions</div>
-            <div className={styles.xtotal}>
-              {(current.incognita1 === "xtotal"
-              || current.incognita2 === "xtotal"
-              || current.incognita3 === "xtotal")
-              ? <div className={styles.emptyVerde}></div>
-              : current.xtotal}
-            </div>
-            <div className={styles.x}>X</div>
-            <div className={styles.ytotal}>
-              {(current.incognita1 === "ytotal"
-              || current.incognita2 === "ytotal"
-              || current.incognita3 === "ytotal")
-              ? <div className={styles.emptyMorado}></div>
-              : current.ytotal}
-            </div>
-          </div>
-          <div className={styles.box2}>
-            <div>Text area of model</div>
-            {(current.incognita1 === "area"
-              || current.incognita2 === "area"
-              || current.incognita3 === "area")
-              ? <input
-                type="text"
-                onChange={(e) => setInArea(e.target.value)}
-                value={inArea}
-              />
-              : current.area}
-          </div>
-        </section>
-      </section>
-      {!(answer1 && answer2 && answer3) && <button
-        className={styles.check}
-        onClick={() => respuesta2()}
-      >Check
-      </button>}
-      {(answer1 && answer2 && answer3 && song) && Reproducir() }
-      {(answer1 && answer2 && answer3) && <h1>Right!😀</h1> }
-      {(answer1 && answer2 && answer3 && song) && setStar1(Star1+1 ) }
-      {(answer1 && answer2 && answer3 && song) && setcrudPosition(crudPosition+1) }
-      {(answer1 && answer2 && answer3 && song) && setSuperado(superado+1)}
-      {(answer1 && answer2 && answer3 && song) && Nivel1.forceUpdate() }
-      {song && setSong(false)}
-      {superado === 6 && <Felicidades/>}
+      {superado === 6
+        ? <Felicidades/>
+        : <>
+            <h1>Let's Play</h1>
+            <button onClick={() =>console.log(crudPosition)}>Crup</button>
+            <button onClick={() =>console.log(crud)}>Crud</button>
+            <section className={styles.container}>
+              {current.tipo === "2x1" &&
+                <Ejercicio2x1
+                  current={current}
+                  styles={styles}
+                  setInX1={setInX1}
+                  setInX2={setInX2}
+                  setInY1={setInY1}
+                  setInX1pory1={setInX1pory1}
+                  setInX2pory1={setInX1pory2} 
+                  inX1={inX1}
+                  inX2={inX2}
+                  inY1={inY1}
+                  inX1pory1={inX1pory1}
+                  inX2pory1={inX1pory1}/>
+              }
+              {current.tipo === "2x2" &&
+                <Ejercicio2x2
+                  current={current}
+                  styles={styles}
+                  setInX1={setInX1}
+                  setInX2={setInX2}
+                  setInY1={setInY1}
+                  setInY2={setInY2}
+                  setInX1pory1={setInX1pory1}
+                  setInX1pory2={setInX1pory2}
+                  setInX2pory1={setInX2pory1}
+                  setInX2pory2={setInX2pory2}
+                  inX1={inX1}
+                  inX2={inX2}
+                  inY1={inY1}
+                  inY2={inY2}
+                  inX1pory1={inX1pory1}
+                  inX1pory2={inX1pory2}
+                  inX2pory1={inX2pory1}
+                  inX2pory2={inX2pory2}
+                />
+              }
+              {current.tipo === "2x3" &&
+                <Ejercicio2x3
+                  current={current}
+                  styles={styles}
+                  setInX1={setInX1}
+                  setInY1={setInY1}
+                  setInY2={setInY2}
+                  setInY3={setInY3}
+                  setInX2={setInX2}
+                  setInX1pory2={setInX1pory2}
+                  setInX1pory3={setInX1pory3}
+                  setInX2pory2={setInX2pory2}
+                  inX1={inX1}
+                  inY1={inY1}
+                  inY2={inY2}
+                  inY3={inY3}
+                  inX2={inX2}
+                  inX1pory2={inX1pory2}
+                  inX1pory3={inX1pory3}
+                  inX2pory2={inX2pory2}
+                />
+              }
+              {current.tipo === "3x2" &&
+                <Ejercicio3x2
+                  current={current}
+                  styles={styles}
+                  setInX1={setInX1}
+                  setInX2={setInX2}
+                  setInX3={setInX3}
+                  setInY1={setInY1}
+                  inX1={inX1}
+                  inX2={inX2}
+                  inX3={inX3}
+                  inY1={inY1}
+                />
+              }
+              {current.tipo === "3x3" &&
+                <Ejercicio3x3
+                  current={current}
+                  styles={styles}
+                  setInX1={setInX1}
+                  setInX3={setInX3}
+                  setInY1={setInY1}
+                  setInX2pory1={setInX2pory1}
+                  setInX1pory3={setInX3pory3}
+                  inX1={inX1}
+                  inX3={inX3}
+                  inY1={inY1}
+                  inX2pory1={inX2pory1}
+                  inX1pory3={inX3pory3}
+                  setInX3pory3={setInX3pory3}
+                  inX3pory3={inX3pory3}
+                />
+              }
+              {current.tipo === "1x2" &&
+                <Ejercicio1x2
+                  current={current}
+                  styles={styles}
+                  setInY1={setInY1}
+                  setInY2={setInY2}
+                  setInX1pory2={setInX1pory2}
+                  inY1={inY1}
+                  inY2={inY2}
+                  inX1pory2={inX1pory2}
+                />
+              }
+              {current.tipo === "1x3" &&
+                <Ejercicio1x3
+                  current={current}
+                  styles={styles}
+                  setInY1={setInY1}
+                  setInY2={setInY2}
+                  setInX1pory1={setInX1pory1}
+                  inY1={inY1}
+                  inY2={inY2}
+                  inX1pory1={inX1pory1}
+                />
+              }
+              <section className={styles.text2x1}>
+                <div className={styles.box1}>
+                  <div className={styles.dimensions}>Dimensions</div>
+                  <div className={styles.xtotal}>
+                    {(current.incognita1 === "xtotal"
+                    || current.incognita2 === "xtotal"
+                    || current.incognita3 === "xtotal")
+                    ? <div className={styles.emptyVerde}></div>
+                    : current.xtotal}
+                  </div>
+                  <div className={styles.x}>X</div>
+                  <div className={styles.ytotal}>
+                    {(current.incognita1 === "ytotal"
+                    || current.incognita2 === "ytotal"
+                    || current.incognita3 === "ytotal")
+                    ? <div className={styles.emptyMorado}></div>
+                    : current.ytotal}
+                  </div>
+                </div>
+                <div className={styles.box2}>
+                  <div>Text area of model</div>
+                  {(current.incognita1 === "area"
+                    || current.incognita2 === "area"
+                    || current.incognita3 === "area")
+                    ? <input
+                      type="text"
+                      onChange={(e) => setInArea(e.target.value)}
+                      value={inArea}
+                    />
+                    : current.area}
+                </div>
+              </section>
+            </section>
+            {!(answer1 && answer2 && answer3) && <button
+              className={styles.check}
+              onClick={() => respuesta2()}
+            >Check
+            </button>}
+            {(answer1 && answer2 && answer3 && song) && Reproducir() }
+            {(answer1 && answer2 && answer3) && <h1>Right!😀</h1> }
+            {(answer1 && answer2 && answer3 && song) && setStar1(Star1+1 ) }
+            {(answer1 && answer2 && answer3 && song) && Refresh()}
+            {(answer1 && answer2 && answer3 && song) && setSuperado(superado+1)}
+            {song && setSong(false)}
+          </>
+      }
     </div>
   )
 }

@@ -4,7 +4,7 @@ import {
     Route,
     Link
   } from "react-router-dom"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import Nivel1 from "./Niveles/Nivel1"
 import Nivel2 from "./Niveles/Nivel2"
 import Nivel3 from "./Niveles/Nivel3"
