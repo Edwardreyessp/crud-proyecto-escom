@@ -29,9 +29,46 @@ input {
   opacity: 0.7;
 }
 
+.volverMenu {
+  color: white;
+  width: 10rem;
+  height: 2rem;
+  margin: 1rem 0;
+  background-color: #4a7aad;
+  border: none;
+  cursor: pointer;
+}
+
+.volverMenu:hover {
+  opacity: 0.7;
+}
+
+h1 {
+  color: white;
+}
+
+.volverMenu2 {
+  color: white;
+  width: 10rem;
+  height: 2rem;
+  margin: 1rem 0;
+  background-color: #4a7aad;
+  border: none;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.volverMenu2:hover {
+  opacity: 0.7;
+}
+
 .title {
   color: white;
   text-transform: uppercase;
+}
+
+.subtitle {
+  color: white;
 }
 
 .check {
@@ -48,6 +85,36 @@ input {
 
 .check:hover {
   opacity: 0.7;
+}
+
+.select {
+  @include displayFlex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 2rem;
+
+  .primeros4 {
+    @include displayFlex;
+  }
+
+  .otros3 {
+    @include displayFlex;
+  }
+
+  button {
+    width: 20rem;
+    height: 15rem;
+    font-size: 3rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: #00e4b0;
+  }
+
+  button:hover {
+    opacity: 0.7;
+  }
 }
 
 .container {
@@ -133,6 +200,7 @@ input {
       width: 50%;
       height: 2rem;
       outline: none;
+      background-color: #00bd8b;
     }
   }
 }

@@ -68,34 +68,37 @@ const CrearEjercicio = ({crud, setCrear, setCrud, setSomeButton}) => {
 
   return (
     <div>
-      <button  onClick={() => back()}>Volver al menú</button>
-      {select && <button onClick={() => reBack()}>Volver a seleccionar tipo</button>}
-      <h1>Agregar Ejecicio</h1>
-      {!select && <p>Selecciona el tipo de cuadrado</p>}
-      {!select && 
-        <div className={styles.lVerde}></div>
-      }
-      {!select && (
-        <button onClick={() =>M2x1()}>Cuadro 2x1</button>
-      )}
-      {!select && (
-        <button onClick={() =>M2x2()}>Cuadro 2x2</button>
-      )}
-      {!select && (
-        <button onClick={() =>M2x3()}>Cuadro 2x3</button>
-      )}
-      {!select && (
-        <button onClick={() =>M3x2()}>Cuadro 3x2</button>
-      )}
-      {!select && (
-        <button onClick={() =>M3x3()}>Cuadro 3x3</button>
-      )}
-      {!select && (
-        <button onClick={() =>M1x2()}>Cuadro 1x2</button>
-      )}
-      {!select && (
-        <button onClick={() =>M1x3()}>Cuadro 1x3</button>
-      )}
+      <button className={styles.volverMenu} onClick={() => back()}>Volver al menú</button>
+      {select && <button className={styles.volverMenu2} onClick={() => reBack()}>Volver a seleccionar tipo</button>}
+      <h1 className={styles.title}>Agregar Ejecicio</h1>
+      {!select && <p className={styles.subtitle}>Selecciona el tipo de cuadrado</p>}
+      <div className={styles.select}>
+        <div className={styles.primeros4}>
+          {!select && (
+            <button onClick={() =>M2x1()}>Cuadro 2x1</button>
+          )}
+          {!select && (
+            <button onClick={() =>M2x2()}>Cuadro 2x2</button>
+          )}
+          {!select && (
+            <button onClick={() =>M2x3()}>Cuadro 2x3</button>
+          )}
+          {!select && (
+            <button onClick={() =>M3x2()}>Cuadro 3x2</button>
+          )}
+        </div>
+        <div className={styles.otros3}>
+          {!select && (
+            <button onClick={() =>M3x3()}>Cuadro 3x3</button>
+          )}
+          {!select && (
+            <button onClick={() =>M1x2()}>Cuadro 1x2</button>
+          )}
+          {!select && (
+            <button onClick={() =>M1x3()}>Cuadro 1x3</button>
+          )}
+        </div>
+      </div>
       
       <section className={styles.container}>
         {((maM2x1 && <Make2X1 setCrud={setCrud} crud={crud}/>)
