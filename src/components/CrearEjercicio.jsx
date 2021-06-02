@@ -8,6 +8,7 @@ import Make3x3 from "./makes/Make3x3"
 import Make1x2 from "./makes/Make1x2"
 import Make1x3 from "./makes/Make1x3"
 
+
 const CrearEjercicio = ({crud, setCrear, setCrud, setSomeButton}) => {
     
     const [maM2x1, setmaM2x1] = useState(false)
@@ -67,10 +68,13 @@ const CrearEjercicio = ({crud, setCrear, setCrud, setSomeButton}) => {
 
   return (
     <div>
-      <button onClick={() => back()}>Volver al menú</button>
+      <button  onClick={() => back()}>Volver al menú</button>
       {select && <button onClick={() => reBack()}>Volver a seleccionar tipo</button>}
       <h1>Agregar Ejecicio</h1>
       {!select && <p>Selecciona el tipo de cuadrado</p>}
+      {!select && 
+        <div className={styles.lVerde}></div>
+      }
       {!select && (
         <button onClick={() =>M2x1()}>Cuadro 2x1</button>
       )}
@@ -87,10 +91,10 @@ const CrearEjercicio = ({crud, setCrear, setCrud, setSomeButton}) => {
         <button onClick={() =>M3x3()}>Cuadro 3x3</button>
       )}
       {!select && (
-        <button onClick={() =>M1x2()}>Cuadro 2x1</button>
+        <button onClick={() =>M1x2()}>Cuadro 1x2</button>
       )}
       {!select && (
-        <button onClick={() =>M1x3()}>Cuadro 2x1</button>
+        <button onClick={() =>M1x3()}>Cuadro 1x3</button>
       )}
       
       <section className={styles.container}>

@@ -188,7 +188,7 @@ const App = () => {
           {/*<Route path="/build/index.html">*/}
           <Route exact path="/"> 
             {component === "MenuCrud" && <MenuCrud crud={crud} setCrud={setCrud}/>}
-            {component === "usuario" && <Usario/>}
+            {component === "usuario" && <Usario crud={crud} setCrud={setCrud}/>}
             {component === "" &&
               <div className={styles.login}>
                 <form className={styles.form} onSubmit={handleSumbit}>

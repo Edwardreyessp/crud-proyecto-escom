@@ -4,20 +4,25 @@ import {
     Route,
     Link
   } from "react-router-dom"
-import Nivel1 from "./Nivel1"
-import Nivel2 from "./Nivel2"
-import Nivel3 from "./Nivel3"
-import Nivel4 from "./Nivel4"
-import Nivel5 from "./Nivel5"
-import Nivel6 from "./Nivel6"
+import { useEffect, useState } from "react"
+import Nivel1 from "./Niveles/Nivel1"
+import Nivel2 from "./Niveles/Nivel2"
+import Nivel3 from "./Niveles/Nivel3"
+import Nivel4 from "./Niveles/Nivel4"
+import Nivel5 from "./Niveles/Nivel5"
+import Nivel6 from "./Niveles/Nivel6"
 
 
-const Usario = () => {
+const Usario = ({crud}) => {
+
+  const [Star1, setStar1] = useState(0);
+
+
     return (
         <Router>
         <main >
         <section >
-          <Link to="/" >
+          <Link onClick={()=> setStar1(0)} to="/" >
             <h1>Menu</h1>
           </Link>
         </section>
@@ -26,8 +31,8 @@ const Usario = () => {
               <section>
                   <div>
                     <div></div>
-                    <Link  to="/Nivel1">Nivel1</Link> 
-                    <div>Estrellitas Nivel 1</div>
+                    <Link  to="/Nivel1">Nivel 1</Link> 
+                    <div>{Star1}<i class="fas fa-star"></i></div>
                   </div>
                   <div>
                     <div></div>
@@ -56,7 +61,7 @@ const Usario = () => {
               </section>
           </Route>
           <Route path="/Nivel1">
-            <Nivel1/>
+            <Nivel1 crud={crud}  setStar1={setStar1} Star1={Star1}/>
           </Route>
           <Route path="/Nivel2">
             <Nivel2/>          
