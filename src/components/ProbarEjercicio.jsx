@@ -325,8 +325,8 @@ const ProbarEjercicio = ({state, idChallenge, setSomeButtom, setProbar}) => {
 
   return (
     <div>
-      <button onClick={() => back()}>Volver</button>
-      <h1>Let's Play</h1>
+      <button className={styles.volver} onClick={() => back()}>Volver</button>
+      <h1 className={styles.title}>Let's Play</h1>
       <section className={styles.container}>
         {current.tipo === "2x1" &&
           <Ejercicio2x1

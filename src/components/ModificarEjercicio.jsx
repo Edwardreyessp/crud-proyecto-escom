@@ -317,8 +317,8 @@ const ModificarEjercicio = ({crud,idChallenge,setSomeButton,setModificar, setCru
 
     return (
       <div>
-      <button onClick={() => back()}>Volver</button>
-      <h1>Let's start</h1>
+      <button className={styles.volver} onClick={() => back()}>Volver</button>
+      <h1 className={styles.title}>Let's start</h1>
       <section className={styles.container}>
         {current.tipo === "2x1" &&
           <section className={styles.cuadrado2x1}>
@@ -1799,25 +1799,27 @@ const ModificarEjercicio = ({crud,idChallenge,setSomeButton,setModificar, setCru
           </div>
           <div className={styles.box2}>
             <div>Text area of model</div>
-            {(current.incognita1 === "area"
-                || current.incognita2 === "area"
-                || current.incognita3 === "area")
-                ? (!modArea ? "R: " + current.area
-                  : <input
-                      type="text"
-                      onChange={(e) => setInArea(e.target.value)}
-                      value={InArea}
-                    />)
-                : (!modArea ? current.area
-                  : <input
-                      type="text"
-                      onChange={(e) => setInArea(e.target.value)}
-                      value={InArea}
-                    />)}
-                {!modArea 
-                ? <button onClick={() => setmodArea(true)}><i class="fas fa-edit"></i></button>
-                : <button onClick={() => mArea()}><i class="fas fa-save"></i></button>}
-                {ayuda && mArea()}
+            <div>
+              {(current.incognita1 === "area"
+                  || current.incognita2 === "area"
+                  || current.incognita3 === "area")
+                  ? (!modArea ? "R: " + current.area
+                    : <input
+                        type="text"
+                        onChange={(e) => setInArea(e.target.value)}
+                        value={InArea}
+                      />)
+                  : (!modArea ? current.area
+                    : <input
+                        type="text"
+                        onChange={(e) => setInArea(e.target.value)}
+                        value={InArea}
+                      />)}
+                  {!modArea 
+                  ? <button onClick={() => setmodArea(true)}><i class="fas fa-edit"></i></button>
+                  : <button onClick={() => mArea()}><i class="fas fa-save"></i></button>}
+                  {ayuda && mArea()}
+            </div>
           </div>
         </section>
       </section>

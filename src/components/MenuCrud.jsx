@@ -61,24 +61,40 @@ const MenuCrud = ({crud,setCrud}) => {
   return (
     <div className={styles.containerCrud}>
       {!someButtom ? <main className={styles.crud}>
-        <button onClick={() => Crear()}>Crear un nuevo ejercicio</button>
         <section className={styles.header}>
           <div>Ejercicio</div>
           <div>Acciones</div>
         </section>
+        <button
+          onClick={() => Crear()}
+          className={styles.crear}>
+          Crear un nuevo ejercicio
+        </button>
           {crud.map(({id}) => (
             <section key={id} className={styles.lista}>
               <div>
                   Nivel {id[0]} -challenge {id[1]}
               </div>
               <section>
-                <button onClick={() => setVerEjercicio(id)}>
+                <button
+                  onClick={() => setVerEjercicio(id)}
+                  className={styles.ver}>
                   Ver ejercicio
                 </button>
-                <button onClick={() => Modificar(id)}>Modificar ejercicio</button>
-                <button onClick={() =>DeleteMap(id)}>Eliminar ejercicio</button>
-                <button onClick={() => setProbarEjercicio(id)}>
+                <button
+                  onClick={() => Modificar(id)}
+                  className={styles.editar}>
+                  Modificar ejercicio
+                </button>
+                <button
+                  onClick={() => setProbarEjercicio(id)}
+                  className={styles.probar}>
                   Probar ejercicio
+                </button>
+                <button onClick={
+                  () =>DeleteMap(id)}
+                  className={styles.eliminar}>
+                  Eliminar ejercicio
                 </button>
               </section>
             </section>

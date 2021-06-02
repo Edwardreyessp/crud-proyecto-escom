@@ -43,8 +43,8 @@ const VerEjercicio = ({crud, idChallenge, setSomeButton, setVer}) => {
 
   return (
     <div>
-      <button onClick={() => back()}>Volver</button>
-      <h1>Let's start</h1>
+      <button className={styles.volver} onClick={() => back()}>Volver</button>
+      <h1 className={styles.title}>Let's start</h1>
       <section className={styles.container}>
         {current.tipo === "2x1" &&
           <section className={styles.cuadrado2x1}>
