@@ -9,7 +9,7 @@ import Make1x2 from "./makes/Make1x2"
 import Make1x3 from "./makes/Make1x3"
 
 
-const CrearEjercicio = ({crud, setCrear, setCrud, setSomeButton}) => {
+const CrearEjercicio = ({crud, setCrear, setCrud, setSomeButton,setchallengesN7,challengesN7}) => {
     
     const [maM2x1, setmaM2x1] = useState(false)
     const [maM2x2, setMaM2x2] = useState(false)
@@ -40,6 +40,7 @@ const CrearEjercicio = ({crud, setCrear, setCrud, setSomeButton}) => {
   const M2x1 =() =>{
     setSelect(true)
     setmaM2x1(true)
+    setchallengesN7(5)
   }
   const M2x2 =() =>{
     setSelect(true)
@@ -101,13 +102,13 @@ const CrearEjercicio = ({crud, setCrear, setCrud, setSomeButton}) => {
       </div>
       
       <section className={styles.container}>
-        {((maM2x1 && <Make2X1 setCrud={setCrud} crud={crud}/>)
-          ||(maM2x2 && <Make2X2 setCrud={setCrud} crud={crud}/>)
-          ||(maM2x3 && <Make2x3 setCrud={setCrud} crud={crud}/>)
-          ||(maM3x2 && <Make3x2 setCrud={setCrud} crud={crud}/>)
-          ||(maM3x3 && <Make3x3 setCrud={setCrud} crud={crud}/>)
-          ||(maM1x2 && <Make1x2 setCrud={setCrud} crud={crud}/>)
-          ||(maM1x3 && <Make1x3 setCrud={setCrud} crud={crud}/>)
+        {((maM2x1 && <Make2X1 setCrud={setCrud} crud={crud}setchallengesN7={setchallengesN7} challengesN7={challengesN7}/>)
+          ||(maM2x2 && <Make2X2 setCrud={setCrud} crud={crud} setchallengesN7={setchallengesN7} challengesN7={challengesN7}/>)
+          ||(maM2x3 && <Make2x3 setCrud={setCrud} crud={crud} setchallengesN7={setchallengesN7} challengesN7={challengesN7}/>)
+          ||(maM3x2 && <Make3x2 setCrud={setCrud} crud={crud} setchallengesN7={setchallengesN7} challengesN7={challengesN7}/>)
+          ||(maM3x3 && <Make3x3 setCrud={setCrud} crud={crud} setchallengesN7={setchallengesN7} challengesN7={challengesN7}/>)
+          ||(maM1x2 && <Make1x2 setCrud={setCrud} crud={crud} setchallengesN7={setchallengesN7} challengesN7={challengesN7}/>)
+          ||(maM1x3 && <Make1x3 setCrud={setCrud} crud={crud} setchallengesN7={setchallengesN7} challengesN7={challengesN7}/>)
         )}
       </section>
     </div>

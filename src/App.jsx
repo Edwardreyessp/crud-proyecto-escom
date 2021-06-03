@@ -29,6 +29,13 @@ const App = () => {
   const [component, setComponent] = useState("")
   const [login, setLogin] = useState(false)
   const [logout, setLogout] = useState(false)
+  const [challengesN1, setchallengesN1] = useState(6)
+  const [challengesN2, setchallengesN2] = useState(6)
+  const [challengesN3, setchallengesN3] = useState(6)
+  const [challengesN4, setchallengesN4] = useState(6)
+  const [challengesN5, setchallengesN5] = useState(6)
+  const [challengesN6, setchallengesN6] = useState(6)
+  const [challengesN7, setchallengesN7] = useState(0)
   let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
 
   useEffect(() => {
@@ -161,6 +168,7 @@ const App = () => {
 
   return (
     <Router>
+      <button onClick={() =>console.log(challengesN7)}>Limit</button>
       <main className={styles.container}>
         <section className={styles.enlaces}>
           {/* <Link to="/Proyecto/index.html" onClick={() => reset()}>Home</Link> */}
@@ -187,8 +195,34 @@ const App = () => {
           {/* <Route path="/Proyecto/index.html"> */}
           {/*<Route path="/build/index.html">*/}
           <Route exact path="/"> 
-            {component === "MenuCrud" && <MenuCrud crud={crud} setCrud={setCrud}/>}
-            {component === "usuario" && <Usario crud={crud} setCrud={setCrud}/>}
+            {component === "MenuCrud" && <MenuCrud crud={crud} 
+            setCrud={setCrud} 
+            setchallengesN1={setchallengesN1} 
+            challengesN1={challengesN1}
+            setchallengesN2={setchallengesN2} 
+            challengesN2={challengesN2}
+            setchallengesN3={setchallengesN3} 
+            challengesN3={challengesN3}
+            setchallengesN4={setchallengesN4} 
+            challengesN4={challengesN4}
+            setchallengesN5={setchallengesN5} 
+            challengesN5={challengesN5}
+            setchallengesN6={setchallengesN6} 
+            challengesN6={challengesN6}
+            setchallengesN7={setchallengesN7} 
+            challengesN7={challengesN7}
+            />}
+            {component === "usuario" && <Usario 
+            crud={crud} 
+            setCrud={setCrud}  
+            challengesN1={challengesN1}
+            challengesN2={challengesN2}
+            challengesN3={challengesN3}
+            challengesN4={challengesN4}
+            challengesN5={challengesN5}
+            challengesN6={challengesN6}
+            challengesN7={challengesN7}
+            />}
             {component === "" &&
               <div className={styles.login}>
                 <form className={styles.form} onSubmit={handleSumbit}>

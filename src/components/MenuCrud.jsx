@@ -6,7 +6,7 @@ import swal from 'sweetalert'
 import ModificarEjercicio from "./ModificarEjercicio"
 import CrearEjercicio from "./CrearEjercicio"
 
-const MenuCrud = ({crud,setCrud}) => {
+const MenuCrud = ({crud,setCrud,setchallengesN1,challengesN1,setchallengesN2,challengesN2,setchallengesN3,challengesN3,setchallengesN4,challengesN4,setchallengesN5,challengesN5,setchallengesN6,challengesN6,setchallengesN7,challengesN7}) => {
   const [someButtom, setSomeButtom] = useState(false)
   const [modificar,setModificar]=useState(false)
   const [idChallenge,setIdChallenge] = useState(0)
@@ -36,6 +36,7 @@ const MenuCrud = ({crud,setCrud}) => {
   const Crear = () => {
     setCrear(true)
     setSomeButtom(true)
+    setchallengesN7(3)
   }
 
   const DeleteMap = (id) => {
@@ -53,6 +54,14 @@ const MenuCrud = ({crud,setCrud}) => {
         });
         const newCrud = crud.filter(cruds => cruds.id !== id);
         setCrud(newCrud);
+        if(id[0]==="1"){setchallengesN1(challengesN1-1)}
+        if(id[0]==="2"){setchallengesN2(challengesN2-1)}
+        if(id[0]==="3"){setchallengesN3(challengesN3-1)}
+        if(id[0]==="4"){setchallengesN4(challengesN4-1)}
+        if(id[0]==="5"){setchallengesN5(challengesN5-1)}
+        if(id[0]==="6"){setchallengesN6(challengesN6-1)}
+        if(id[0]==="7"){setchallengesN7(challengesN7-1)}
+        
         <MenuCrud/>
       } 
     });
@@ -127,6 +136,8 @@ const MenuCrud = ({crud,setCrud}) => {
               setCrear={setCrear}
               setCrud={setCrud}
               setSomeButton={setSomeButtom}
+              setchallengesN7={setchallengesN7}
+              challengesN7={challengesN7}
             />) 
         )
       }

@@ -9,7 +9,7 @@ import Ejercicio3x2 from "../Ejercicio3x2"
 import Ejercicio3x3 from "../Ejercicio3x3"
 import Felicidades from "../Felicidades"
 
-const Nivel1 = ({crud, setStar1,Star1,challengesN1}) => {
+const Nivel7 = ({crud, setStar7,Star7,Inicio,challengesN7}) => {
   const [superado, setSuperado] = useState(0)
   const [current, setCurrent] = useState([])
   const [inX1, setInX1] = useState("")
@@ -29,7 +29,7 @@ const Nivel1 = ({crud, setStar1,Star1,challengesN1}) => {
   const [answer2, setAnswer2] = useState(false)
   const [answer3, setAnswer3] = useState(false)
   const [song, setSong] = useState(false)
-  const [crudPosition, setcrudPosition] = useState(0)
+  const [crudPosition, setcrudPosition] = useState(Inicio)
 
   useEffect(() => {
     crud.map(({id, x1, x2, x3, xtotal, y1, y2, y3, ytotal, x1pory1, x1pory2, x1pory3, x2pory1, x2pory2, x2pory3, x3pory1, x3pory2, x3pory3, area, tipo, incognita1, incognita2, incognita3}) => (
@@ -343,9 +343,9 @@ const Nivel1 = ({crud, setStar1,Star1,challengesN1}) => {
 
   return (
     <div>
-      {challengesN1===0 ? <h1>The task are empty</h1>
+      {challengesN7===0 ? <h1>The task are empty</h1>
       :<>
-      {superado === challengesN1 
+      {superado === challengesN7 
         ? <Felicidades/>
         : <>
             <h1>Let's Play</h1>
@@ -507,7 +507,7 @@ const Nivel1 = ({crud, setStar1,Star1,challengesN1}) => {
             </button>}
             {(answer1 && answer2 && answer3 && song) && Reproducir() }
             {(answer1 && answer2 && answer3) && <h1>Right!😀</h1> }
-            {(answer1 && answer2 && answer3 && song) && setStar1(Star1+1 ) }
+            {(answer1 && answer2 && answer3 && song) && setStar7(Star7+1 ) }
             {(answer1 && answer2 && answer3 && song) && Refresh()}
             {(answer1 && answer2 && answer3 && song) && setSuperado(superado+1)}
             {song && setSong(false)}
@@ -518,4 +518,4 @@ const Nivel1 = ({crud, setStar1,Star1,challengesN1}) => {
   )
 }
 
-export default Nivel1
+export default Nivel7

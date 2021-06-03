@@ -1,8 +1,9 @@
 import { nanoid } from "nanoid"
 import { useState } from "react"
 import styles from "../../scss/Ejercicio.module.scss"
+import swal from 'sweetalert'
 
-const Make2X1 = ({setCrud, crud}) => {
+const Make2X1 = ({setCrud,crud,setchallengesN7,challengesN7}) => {
   const [inX1, setInX1] = useState("")
   const [inX2, setInX2] = useState("")
   const [inX1Y1, setInX1Y1] = useState("")
@@ -20,7 +21,7 @@ const Make2X1 = ({setCrud, crud}) => {
   
   const handleSumbit = () => {
     setCrud([...crud, { 
-      id: nanoid(2),
+      id: "7" +nanoid(1),
       x1: inX1,
       x2: inX2,
       x3: "",
@@ -50,7 +51,8 @@ const Make2X1 = ({setCrud, crud}) => {
     setInX1Y1("")
     setInX2Y1("")
     setInArea("")
-    alert("Guardado exitósamente")
+    setchallengesN7(9)
+    swal("Listo","Guardado Exitosamente","success")
   }
 
   const setVar1 = () => {
