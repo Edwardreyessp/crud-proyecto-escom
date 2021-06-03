@@ -36,7 +36,6 @@ const MenuCrud = ({crud,setCrud,setchallengesN1,challengesN1,setchallengesN2,cha
   const Crear = () => {
     setCrear(true)
     setSomeButtom(true)
-    setchallengesN7(3)
   }
 
   const DeleteMap = (id) => {

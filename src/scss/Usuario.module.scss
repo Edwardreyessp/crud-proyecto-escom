@@ -1,0 +1,100 @@
+@import "mixins";
+
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: #393e46;
+  min-height: 93.2vh;
+
+  .niveles {
+    width: 80%;
+    margin-top: 2rem;
+
+    .titleLink {
+      text-decoration: none;
+      color: white;
+      width: 10rem;
+      margin-bottom: 3rem;
+    }
+
+    .title {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 2rem;
+      width: 6rem;
+      margin-bottom: 2rem;
+    }
+
+    .title:hover {
+      opacity: 0.7;
+      border-bottom: 2px solid white;
+    }
+
+    .nivelesGrid {
+      @include displayGrid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+
+      .link {
+        @include displayFlex;
+        color: white;
+        flex-direction: column;
+        border: 2px white solid;
+        padding: 1rem 0;
+        background-color: #222;
+        text-decoration: none;
+        border-radius: 1rem;
+
+        .img1 {
+          @include nivelesImg;
+          background-image: url("http://museodeljuguete.mx/wp-content/uploads/2015/04/1.png");
+        }
+        .img2 {
+          @include nivelesImg;
+          background-image: url("https://i.pinimg.com/originals/0b/72/75/0b72755a5ea5e1999d6fbfd3aa544355.png");
+        }
+        .img3 {
+          @include nivelesImg;
+          background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b0801584-14e4-4a5e-9006-26be51081bbb/d74n36l-ead9c7a9-a42b-41e6-bad6-c35f11294afc.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2IwODAxNTg0LTE0ZTQtNGE1ZS05MDA2LTI2YmU1MTA4MWJiYlwvZDc0bjM2bC1lYWQ5YzdhOS1hNDJiLTQxZTYtYmFkNi1jMzVmMTEyOTRhZmMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.qpFEMjp0ulzLISVvwZBaUbIsQZ3eLNgDRaIq_VDp-aI");
+        }
+        .img4 {
+          @include nivelesImg;
+          background-image: url("https://i.pinimg.com/originals/7a/7f/76/7a7f76ea01702078582a1ae8b7344fb3.png");
+        }
+        .img5 {
+          @include nivelesImg;
+          background-image: url("https://i.pinimg.com/originals/13/19/62/1319628426fa9d3783705daf7db525f8.png");
+        }
+        .img6 {
+          @include nivelesImg;
+          background-image: url("https://i.pinimg.com/originals/6c/72/47/6c7247dfb67e18add93d682dc9fdabcc.png");
+        }
+      }
+
+      .link:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .nivelFlex {
+      @include displayFlex;
+      margin-top: 1rem;
+      color: white;
+      flex-direction: column;
+      border: 2px white solid;
+      background-color: #222;
+      border-radius: 1rem;
+      padding: 1rem 0;
+      text-decoration: none;
+
+      .img7 {
+        @include nivelesImg;
+        background-image: url("https://i.pinimg.com/originals/b2/9f/f9/b29ff97c3d98cf3e246cd6d4e116fc24.jpg");
+      }
+    }
+
+    .nivelFlex:hover {
+      opacity: 0.7;
+    }
+  }
+}

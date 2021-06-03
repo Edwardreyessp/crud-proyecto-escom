@@ -1,0 +1,34 @@
+.container {
+  width: 100vw;
+  height: 80vh;
+  background-image: url("https://acegif.com/wp-content/gif/confetti-10.gif");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .box {
+    width: 35rem;
+    height: 35rem;
+    background-color: #00adb5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
+
+    .img {
+      background-image: url("https://lasimagenesdegoku.com/wp-content/uploads/2018/02/happy-goku.png");
+      background-size: 100% 100%;
+      width: 50%;
+      height: 50%;
+      margin: 1rem 0;
+      border-radius: 1rem;
+    }
+  }
+}

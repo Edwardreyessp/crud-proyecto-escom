@@ -40,7 +40,6 @@ const CrearEjercicio = ({crud, setCrear, setCrud, setSomeButton,setchallengesN7,
   const M2x1 =() =>{
     setSelect(true)
     setmaM2x1(true)
-    setchallengesN7(5)
   }
   const M2x2 =() =>{
     setSelect(true)

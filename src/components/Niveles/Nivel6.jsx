@@ -9,7 +9,7 @@ import Ejercicio3x2 from "../Ejercicio3x2"
 import Ejercicio3x3 from "../Ejercicio3x3"
 import Felicidades from "../Felicidades"
 
-const Nivel6 = ({crud, setStar6,Star6,Inicio,challengesN6}) => {
+const Nivel6 = ({crud, setStar6,Star6,Inicio,challengesN6, setBandera6}) => {
   const [superado, setSuperado] = useState(0)
   const [current, setCurrent] = useState([])
   const [inX1, setInX1] = useState("")
@@ -32,7 +32,8 @@ const Nivel6 = ({crud, setStar6,Star6,Inicio,challengesN6}) => {
   const [crudPosition, setcrudPosition] = useState(Inicio)
 
   useEffect(() => {
-    crud.map(({id, x1, x2, x3, xtotal, y1, y2, y3, ytotal, x1pory1, x1pory2, x1pory3, x2pory1, x2pory2, x2pory3, x3pory1, x3pory2, x3pory3, area, tipo, incognita1, incognita2, incognita3}) => (
+    if((crudPosition < crud.length)) {
+      crud.map(({id, x1, x2, x3, xtotal, y1, y2, y3, ytotal, x1pory1, x1pory2, x1pory3, x2pory1, x2pory2, x2pory3, x3pory1, x3pory2, x3pory3, area, tipo, incognita1, incognita2, incognita3}) => (
       id === crud[crudPosition].id &&
         setCurrent({
           id: id,
@@ -60,6 +61,7 @@ const Nivel6 = ({crud, setStar6,Star6,Inicio,challengesN6}) => {
           incognita3: incognita3
         })
     ))
+    }
     // eslint-disable-next-line
   }, [crudPosition])
 
@@ -346,11 +348,9 @@ const Nivel6 = ({crud, setStar6,Star6,Inicio,challengesN6}) => {
       {challengesN6===0 ? <h1>The task are empty</h1>
       :<>
       {superado === challengesN6 
-        ? <Felicidades/>
+        ? <Felicidades setBandera6={setBandera6} id={crud[crudPosition - 1].id}/>
         : <>
             <h1>Let's Play</h1>
-            <button onClick={() =>console.log(crudPosition)}>Crup</button>
-            <button onClick={() =>console.log(crud)}>Crud</button>
             <section className={styles.container}>
               {current.tipo === "2x1" &&
                 <Ejercicio2x1

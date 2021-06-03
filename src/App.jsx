@@ -168,7 +168,6 @@ const App = () => {
 
   return (
     <Router>
-      <button onClick={() =>console.log(challengesN7)}>Limit</button>
       <main className={styles.container}>
         <section className={styles.enlaces}>
           {/* <Link to="/Proyecto/index.html" onClick={() => reset()}>Home</Link> */}
@@ -176,7 +175,7 @@ const App = () => {
           <Link to="/" className={styles.link}
             onClick={() => reset()}>
             <div>
-              <i className="fas fa-home"></i>
+              {logout ? <i class="fas fa-door-open"></i> : <i className="fas fa-home"></i>}
               {logout ? "Log out" : "Home"}
             </div>
           </Link> 

@@ -67,7 +67,16 @@ const Make3x2 = ({crud, setCrud,setchallengesN7,challengesN7}) => {
     setInX3Y1("")
     setInX3Y2("")
     setInArea("")
-    setchallengesN7(challengesN7+1)
+    setNIncognita(0)
+    setAnswer1(false)
+    setAnswer2(false)
+    setAnswer3(false)
+    setAnswer4(false)
+    setAnswer5(false)
+    setIncognita1("")
+    setIncognita2("")
+    setIncognita3("")
+    setchallengesN7(challengesN7 + 1)
     swal("Listo","Guardado Exitosamente","success")
   }
 

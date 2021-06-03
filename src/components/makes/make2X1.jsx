@@ -51,7 +51,14 @@ const Make2X1 = ({setCrud,crud,setchallengesN7,challengesN7}) => {
     setInX1Y1("")
     setInX2Y1("")
     setInArea("")
-    setchallengesN7(9)
+    setAnswer1(false)
+    setAnswer2(false)
+    setAnswer3(false)
+    setAnswer4(false)
+    setIncognita1("")
+    setIncognita2("")
+    setIncognita3("")
+    setchallengesN7(challengesN7 + 1)
     swal("Listo","Guardado Exitosamente","success")
   }
 

@@ -54,9 +54,16 @@ const Make1x2 = ({crud, setCrud,setchallengesN7,challengesN7}) => {
     setInX1Y1("")
     setInX1Y2("")
     setInArea("")
-    setchallengesN7(challengesN7+1)
+    setNIncognita(0)
+    setAnswer1(false)
+    setAnswer2(false)
+    setAnswer3(false)
+    setAnswer4(false)
+    setIncognita1("")
+    setIncognita2("")
+    setIncognita3("")
+    setchallengesN7(challengesN7 + 1)
     swal("Listo","Guardado Exitosamente","success")
-
   }
 
   const setVar1 = () => {
